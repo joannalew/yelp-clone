@@ -1,0 +1,45 @@
+.nav-main {
+    display: flex;
+    justify-content: space-between;
+    background-image: url('https://bit.ly/2QeN1gZ');
+}
+
+.nav-left, .nav-right {
+    display: inline-block;
+}
+ 
+.nav-content {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+.header-item {
+    color: #fff;
+    display: block;
+    padding: 9px 12px 10px;
+    margin-right: 5px;
+    font-size: 14px;
+    line-height: 1.28571em;
+    font-weight: 700;
+    background: none;
+    border-bottom: 2px solid transparent;
+}
+
+.header-item:hover {
+    border-bottom: 2px solid white;
+}
+
+.signup-btn {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 4px;
+    border: 2px solid #fff;
+    padding: 7px 24px 8px;
+}
+
+.signup-btn:hover {
+    color: #666;
+    background: white;
+}
