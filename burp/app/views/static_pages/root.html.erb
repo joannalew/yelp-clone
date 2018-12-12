@@ -1,3 +1,14 @@
+
+<% if logged_in? %>
+    <script type="text/javascript">
+        window.currentUser = <%= render(
+            "api/users/user.json.jbuilder",
+            user: current_user
+        ).html_safe %>
+    </script>
+<% end %>
+
+
 <main id="root">
     <h2>Pretend you didn't see that</h2>
 </main>

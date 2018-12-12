@@ -11,7 +11,7 @@ const Greeting = ({ currentUser, logout }) => {
 
     const personalGreeting = () => (
         <div className='welcome-user'>
-            <h2 className='welcome-name'>Hi, {currentUser.username}!</h2>
+            <h2 className='welcome-name'>Hi, {currentUser.first_name}!</h2>
             <button className="welcome-button" onClick={logout}>Log Out</button>
         </div>
     );
