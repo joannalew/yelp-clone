@@ -6,7 +6,7 @@ class Api::SessionsController < ApplicationController
             )
     if @user
       login(@user)
-      render json: ['SessionsController redirect not completed']       # go where after log in?
+      render "api/users/show"   
     else
       render json: ["Invalid username/password combination"], status: 401
     end

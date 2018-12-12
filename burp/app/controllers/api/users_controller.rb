@@ -4,7 +4,7 @@ class Api::UsersController < ApplicationController
 
     if @user.save
       login(@user)
-      render json: ['UsersController redirect not completed']        # go where after log in?
+      render "api/users/show"
     else
       render json: @user.errors.full_messages, status: 422
     end
