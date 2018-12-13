@@ -32,7 +32,7 @@ class SessionForm extends React.Component {
     getUserNames() {
         if (this.props.formType === 'Sign Up'){
             return (
-                <div class="login-input-name">
+                <div className="login-input-name">
                     <input type="text"
                             value={this.state.first_name}
                             onChange={this.update('first_name')}

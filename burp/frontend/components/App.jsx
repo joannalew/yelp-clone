@@ -5,7 +5,7 @@ import GreetingContainer from './greeting/greeting_container';
 const App = () => (
     <div>
         <header>
-            <div className="header-image">
+            <div className="header-image background-tint">
                 <div className="header-content">
                     <div className="nav-main">
                         <div className="nav-left">
