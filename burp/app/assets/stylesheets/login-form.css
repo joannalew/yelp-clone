@@ -81,7 +81,7 @@
 
 .login-form-content input[type='text']:focus, 
 .login-form-content input[type='password']:focus {
-    box-shadow: 0 0 5px rgba(34,101,193, 1);
+    box-shadow: 0 0 3px rgba(34,101,193, 1);
     border: 1px solid rgba(34,101,193, 1);
 }
 
@@ -124,4 +124,12 @@
     text-align: center;
     width: 382px;
     height: 342px;
+}
+
+.login-input-name {
+    display: flex;
+}
+
+.login-input-name [type="text"]:first-child {
+    margin-right: 5px;
 }

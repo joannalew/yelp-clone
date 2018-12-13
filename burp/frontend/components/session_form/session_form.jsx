@@ -29,36 +29,39 @@ class SessionForm extends React.Component {
         )
     }
 
-    createUser() {
+    getUserNames() {
         if (this.props.formType === 'Sign Up'){
             return (
-                <div>
-                    <label>First Name:
-                        <input type="text"
-                                value={this.state.first_name}
-                                onChange={this.update('first_name')}
-                                className="login-input" />
-                    </label>
-                    <br />
-                    <label>Last Name:
-                        <input type="text"
-                            value={this.state.last_name}
-                            onChange={this.update('last_name')}
+                <div class="login-input-name">
+                    <input type="text"
+                            value={this.state.first_name}
+                            onChange={this.update('first_name')}
+                            placeholder="First Name"
                             className="login-input" />
-                    </label>
-                    <br />
-                    <label>Zip Code:
-                        <input type="text"
-                            value={this.state.zip_code}
-                            onChange={this.update('zip_code')}
-                            className="login-input" />
-                    </label>
-                    <br />
+
+                    <input type="text"
+                        value={this.state.last_name}
+                        onChange={this.update('last_name')}
+                        placeholder="Last Name"
+                        className="login-input" />
                 </div>
             )
         }
         return '';
     }
+
+    getUserZip() {
+        if (this.props.formType === 'Sign Up') {
+            return (
+                <input type="text"
+                value={this.state.zip_code}
+                onChange={this.update('zip_code')}
+                placeholder="Zip Code"
+                className="login-input" />
+            )
+        }
+        return '';
+    } 
 
     formTitle() {
         if (this.props.formType === 'Sign Up'){
@@ -105,7 +108,7 @@ class SessionForm extends React.Component {
     }
 
     render() {
-        const newUserForm = this.createUser();
+        const newUserForm = this.getUserNames();
 
         return (
             <div className="login-content">
@@ -145,6 +148,8 @@ class SessionForm extends React.Component {
                                         placeholder="Password"
                                         onChange={this.update('password')}
                                         className="login-input" />
+
+                                    { this.getUserZip() }
                                 
                                     <input className="session-submit" type="submit" value={this.props.formType} />
                                 </div>
