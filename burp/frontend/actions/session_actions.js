@@ -18,10 +18,6 @@ const receiveErrors = errors => ({
     errors
 });
 
-export const clearErrors = () => ({
-    type: RECEIVE_ERRORS,
-    errors: []
-});
 
 export const signup = user => dispatch => (
     SessionApiUtil.signup(user)
@@ -41,7 +37,7 @@ export const logout = () => dispatch => (
     SessionApiUtil.logout().then(() => dispatch(logoutCurrentUser()))
 );
 
-// export const clearErrors = () => dispatch => (
-//     () => dispatch(receiveErrors([]))
-// );
+export const clearErrors = () => dispatch => (
+    dispatch(receiveErrors([]))
+);
 

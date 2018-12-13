@@ -20,26 +20,33 @@ class SessionForm extends React.Component {
     }
 
     renderErrors() {
-        return (
-            <ul>
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>{error}</li>
-                ))}
-            </ul>
-        )
+        if (this.props.errors.length > 0){
+            return (
+                <div className="login-errors-container">
+                    <div className="login-errors-center">
+                        <ul className="login-errors-list">
+                            {this.props.errors.map((error, i) => (
+                                <li className="login-error-message" key={`error-${i}`}>{error}</li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            )
+        }
+        return "";
     }
 
     getUserNames() {
         if (this.props.formType === 'Sign Up'){
             return (
                 <div className="login-input-name">
-                    <input type="text"
+                    <input type="text" required 
                             value={this.state.first_name}
                             onChange={this.update('first_name')}
                             placeholder="First Name"
                             className="login-input" />
 
-                    <input type="text"
+                    <input type="text" required
                         value={this.state.last_name}
                         onChange={this.update('last_name')}
                         placeholder="Last Name"
@@ -57,7 +64,7 @@ class SessionForm extends React.Component {
                 value={this.state.zip_code}
                 onChange={this.update('zip_code')}
                 placeholder="Zip Code"
-                className="login-input" />
+                className={"login-input " + this.errorZip() } />
             )
         }
         return '';
@@ -107,6 +114,29 @@ class SessionForm extends React.Component {
         )
     }
 
+    errorEmail() {
+        if (this.props.errors.includes("The email address or password you entered is incorrect.") ||
+            this.props.errors.includes("Email has already been taken")){
+                return "login-error-glow";
+            }
+        return "";
+    }
+
+    errorPassword() {
+        if (this.props.errors.includes("Password is too short (minimum is 6 characters)") ||
+            this.props.errors.includes("The email address or password you entered is incorrect.")){
+                return "login-error-glow";
+            }
+        return "";
+    }
+
+    errorZip() {
+        if (this.props.errors.includes("Zip code can't be blank")){
+            return "login-error-glow";
+        }
+        return "";
+    }
+
     componentWillUnmount() {
         this.props.clearErrors()
     }
@@ -141,17 +171,17 @@ class SessionForm extends React.Component {
                             <form onSubmit={this.handleSubmit} className="login-form-box">
                                 <div className="login-form-content">
                                     { newUserForm }
-                                    <input type="text"
+                                    <input type="email" required
                                         value={this.state.email}
                                         placeholder="Email"
                                         onChange={this.update('email')}
-                                        className="login-input" />
+                                        className={"login-input " + this.errorEmail() } />
 
-                                    <input type="password"
+                                    <input type="password" required
                                         value={this.state.password}
                                         placeholder="Password"
                                         onChange={this.update('password')}
-                                        className="login-input" />
+                                        className={"login-input " + this.errorPassword() } />
 
                                     { this.getUserZip() }
                                 

@@ -23,7 +23,9 @@ ul {
     padding-inline-start: 0px;
 }
 
-input[type='text'], input[type='password'] {
+input[type='text'], 
+input[type='password'],
+input[type='email'] {
     text-align:left;
 }
 

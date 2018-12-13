@@ -67,6 +67,7 @@
 }
 
 .login-form-content [type="text"],
+.login-form-content [type="email"],
 .login-form-content [type="password"] {
     display: block;
     font-size: 14px;
@@ -80,9 +81,21 @@
 }
 
 .login-form-content input[type='text']:focus, 
+.login-form-content input[type='email']:focus, 
 .login-form-content input[type='password']:focus {
     box-shadow: 0 0 3px rgba(34,101,193, 1);
     border: 1px solid rgba(34,101,193, 1);
+}
+
+.login-error-glow {
+    border: 2px solid #d32323 !important;
+    color: #d32323;
+}
+
+.login-error-glow:focus {
+    box-shadow: 0 0 3px rgba(34,101,193, 1);
+    border: 1px solid rgba(34,101,193, 1) !important;
+    color: black;
 }
 
 .login-form-content input[type='submit'] {
@@ -132,4 +145,18 @@
 
 .login-input-name [type="text"]:first-child {
     margin-right: 5px;
+}
+
+.login-errors-container {
+    background-color: #fcd6d3;
+    width: 100%;
+    margin: 18px 18px 0px 24px;
+    padding: 18px 18px 18px 24px;
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+.login-errors-center {
+
 }
