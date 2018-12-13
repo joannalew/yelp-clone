@@ -29,6 +29,9 @@ class SessionForm extends React.Component {
                                 <li className="login-error-message" key={`error-${i}`}>{error}</li>
                             ))}
                         </ul>
+                        <button onClick={() => this.props.clearErrors()}>
+                            <i className="fas fa-times"></i>
+                        </button>
                     </div>
                 </div>
             )
