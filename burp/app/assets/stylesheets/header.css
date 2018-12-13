@@ -1,7 +1,24 @@
+.header-image {
+    padding-top: 30px;
+    background-color: #333;
+    background-size: cover;
+    background-position: 50%;
+    height: 570px;
+    background-image: url('https://bit.ly/2QeN1gZ');
+}
+
+.header-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+
+
 .nav-main {
     display: flex;
     justify-content: space-between;
-    background-image: url('https://bit.ly/2QeN1gZ');
 }
 
 .nav-left, .nav-right {
@@ -11,8 +28,6 @@
 .nav-content {
     display: flex;
     flex-direction: row;
-    margin-left: 5em;
-    margin-right: 5em;
 }
 
 .header-item {
@@ -22,7 +37,7 @@
     margin-right: 5px;
     font-size: 14px;
     line-height: 1.28571em;
-    font-weight: 700;
+    font-weight: 700 !important;
     background: none;
     border-bottom: 2px solid transparent;
 }
@@ -37,9 +52,79 @@
     border-radius: 4px;
     border: 2px solid #fff;
     padding: 7px 24px 8px;
+    margin-left: 5px;
 }
 
 .signup-btn:hover {
     color: #666;
     background: white;
 }
+
+
+
+.header-main {
+    padding-top: 80px;
+}
+
+.header-logo-center {
+    text-align: center;
+}
+
+.header-logo {
+    background-image: url('https://i.imgur.com/EMl0MmA.png');
+    background-size: 160px 80px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0 auto 48px;
+}
+
+.header-logo a {
+    font-size: 50px;
+    line-height: 160px;
+    color: transparent;
+}
+
+
+.header-search-elements {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-label {
+    position: relative;
+}
+
+.search-label:after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: 0;
+    bottom: -4px;
+    width: 1px;
+    background-color: #ccc;
+  }
+
+.search-desc, .search-input {
+    background-color: white;
+    padding: 12px;
+    font-size: 18px;
+}
+
+.search-desc {
+    font-weight: 700;
+    color: #666;
+}
+
+.search-end {
+    border-radius: 4px 0 0 4px;
+}
+
+.search-find input {
+    width: 409px;
+}
+
+.search-near input {
+    width: 304px;
+}
+
