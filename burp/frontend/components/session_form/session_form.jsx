@@ -62,9 +62,9 @@ class SessionForm extends React.Component {
 
     formTitle() {
         if (this.props.formType === 'Sign Up'){
-            return (<h2>Sign Up for Burp</h2>)
+            return (<h2 className="login-form-title">Sign Up for Burp</h2>)
         }
-        return (<h2>Log In to Burp</h2>)
+        return (<h2 className="login-form-title">Log In to Burp</h2>)
     }
 
     formSubtitle() {
@@ -77,7 +77,7 @@ class SessionForm extends React.Component {
         }
         return (
             <p className="login-form-subtitle">
-                New to Yelp? <Link to={'/signup'}>Sign up</Link>
+                New to Burp? <Link to={'/signup'}>Sign up</Link>
             </p>
         )
     }
@@ -87,6 +87,21 @@ class SessionForm extends React.Component {
             return "By continuing, ";
         }
         return "By logging in, ";
+    }
+
+    formRedirect() {
+        if (this.props.formType === 'Sign Up') {
+            return (
+                <div className="login-form-redirect">
+                    Already have Burp? <Link to={'/login'}>Log in</Link>
+                </div>
+            )
+        }
+        return (
+            <div className="login-form-redirect">
+                New to Burp? <Link to={'/signup'}>Sign up</Link>
+            </div>
+        )
     }
 
     render() {
@@ -105,33 +120,43 @@ class SessionForm extends React.Component {
                 <div className="login-form-container">
                     {this.renderErrors()}
 
-                    <div className="login-form-header">
-                        { this.formTitle() }
-                        { this.formSubtitle() }
-                        <p>
-                            { this.formLegalText() }
-                            you agree to see Burp's food pictures and feel strangely hungry.
-                        </p>
-                    </div>
-
-                    <form onSubmit={this.handleSubmit} className="login-form-box">
+                    <div className="login-layout">
                         <div className="login-form">
-                            { newUserForm }
-                            <input type="text"
-                                value={this.state.email}
-                                placeholder="Email"
-                                onChange={this.update('email')}
-                                className="login-input" />
+                            <div className="login-form-header">
+                                { this.formTitle() }
+                                { this.formSubtitle() }
+                                <p className="login-legal">
+                                    { this.formLegalText() }
+                                    you agree to see Burp's food pictures and feel strangely hungry.
+                                </p>
+                            </div>
 
-                            <input type="password"
-                                value={this.state.password}
-                                placeholder="Password"
-                                onChange={this.update('password')}
-                                className="login-input" />
-                        
-                            <input className="session-submit" type="submit" value={this.props.formType} />
+                            <form onSubmit={this.handleSubmit} className="login-form-box">
+                                <div className="login-form-content">
+                                    { newUserForm }
+                                    <input type="text"
+                                        value={this.state.email}
+                                        placeholder="Email"
+                                        onChange={this.update('email')}
+                                        className="login-input" />
+
+                                    <input type="password"
+                                        value={this.state.password}
+                                        placeholder="Password"
+                                        onChange={this.update('password')}
+                                        className="login-input" />
+                                
+                                    <input className="session-submit" type="submit" value={this.props.formType} />
+                                </div>
+                            </form>
+
+                            { this.formRedirect() }
                         </div>
-                    </form>
+
+                        <div className="login-picture">
+                            <img src="https://i.imgur.com/TsUXOUG.png"></img>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

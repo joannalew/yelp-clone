@@ -23,6 +23,9 @@ ul {
     padding-inline-start: 0px;
 }
 
+input[type='text'], input[type='password'] {
+    text-align:left;
+}
 
 
 
