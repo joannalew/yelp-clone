@@ -33,22 +33,32 @@ const App = () => (
                         <div className="header-search">
                             <form action="get" action="/" className="header-search-form">
                                 <div className="header-search-elements">
-                                    <label htmlFor="find-desc" className="search-label">
-                                        <div className="search-left">
-                                            <span className="search-desc search-end">Find</span>
-                                            <span className="search-input search-find">
-                                                <input type="text" method="get" action="/" placeholder="burgers, barbers, spas, handymen..." />
-                                            </span>
+
+                                    <div className="search-left">
+                                        <label htmlFor="find-desc" className="search-label">
+                                            <div className="search-left-inner">
+                                                <span className="search-desc search-start">Find</span>
+                                                <span className="search-input search-find">
+                                                    <input type="text" method="get" action="/" placeholder="burgers, barbers, spas, handymen..." />
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                    <div className="search-right header-search-elements">
+                                        <label htmlFor="near-desc">
+                                            <div className="search-right-inner">
+                                                <span className="search-desc search-mid">Near</span>
+                                                <span className="search-input search-near">
+                                                    <input type="text" method="get" action="/" defaultValue="San Francisco, CA" />
+                                                </span>
+                                            </div>
+                                        </label>
+
+                                        <div className="search-submit search-end">
+                                            <button type="submit" value="Submit"><img src="https://i.imgur.com/WFG3srs.png"></img></button>
                                         </div>
-                                    </label>
-                                    <label htmlFor="near-desc">
-                                        <div className="search-right">
-                                            <span className="search-desc search-mid">Near</span>
-                                            <span className="search-input search-near">
-                                                <input type="text" method="get" action="/" defaultValue="San Francisco, CA" />
-                                            </span>
-                                        </div>
-                                    </label>
+                                    </div>
                                 </div>
                             </form>
                         </div>  
