@@ -1,0 +1,20 @@
+.login-header {
+    min-width: 1020px;
+    height: 40px;
+    background-color: #d32323;
+    position: relative;
+    margin: 0 auto;
+    padding: 12px 15px;
+}
+
+.login-logo {
+    background-image: url('https://i.imgur.com/vx0gbZe.png');
+    background-size: 80px 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 28px;
+    font-weight: 700;
+    color: transparent;
+}

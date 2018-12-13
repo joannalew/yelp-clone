@@ -14,8 +14,6 @@
 }
 
 
-
-
 .nav-main {
     display: flex;
     justify-content: space-between;
@@ -127,9 +125,6 @@
 
 .search-submit {
     color: #fff;
-    width: 24px;
-    padding-top: 25px;
-    padding-bottom: 25px;
     background-color: red;
     vertical-align: center;
 }

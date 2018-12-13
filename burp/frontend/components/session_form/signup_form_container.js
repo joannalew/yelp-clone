@@ -6,8 +6,7 @@ import React from 'react';
 
 const mapStateToProps = ({ errors }) => ({
     errors: errors.session,
-    formType: 'signup',
-    navLink: <Link to='/login'>Log in instead</Link>
+    formType: 'Sign Up'
 });
 
 const mapDispatchToProps = dispatch => ({
