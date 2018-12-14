@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import GreetingContainer from './greeting/greeting_container';
+import BusinessIndexContainer from './business/business_index_container';
 
 const App = () => (
     <div>
+        <BusinessIndexContainer />
         <header>
             <div className="header-image background-tint">
                 <div className="header-content">
