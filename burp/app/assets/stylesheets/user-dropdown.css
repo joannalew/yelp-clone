@@ -1,0 +1,66 @@
+.dropdown-align {
+    position: relative;
+    height: 38px;
+}
+
+.user-drop-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 5px;
+    margin-top: 5px;
+    padding: 12px;
+    min-width: 217px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-color: rgba(0,0,0,.2);
+    border-radius: 3px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    box-sizing: border-box;
+}
+
+.form-triangle {
+    position: absolute;
+    right: 0;
+    margin-top: -15px;
+    margin-right: 25px;
+    color: #fff;
+    z-index: 1;
+}
+
+.dropmenu-item-prof {
+    display: flex;
+}
+
+.prof-pic {
+    width: 60px;
+    height: 60px;
+    margin-right: 9px;
+    background-image: url('https://i.imgur.com/V6leSWg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.prof-info ul li:first-child {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0073bb;
+}
+
+.prof-info ul li:nth-child(2) {
+    font-size: 12px;
+    font-weight: 700;
+    margin: 3px 0px;
+}
+
+.dropmenu-item-logout {
+    color: #0073bb;
+    font-size: 14px;
+    margin-top: 12px;
+    border-top: 1px solid #e6e6e6;
+    padding-top: 11px;
+}
+
+.dropmenu-item-logout button:hover{
+    text-decoration: underline;
+}

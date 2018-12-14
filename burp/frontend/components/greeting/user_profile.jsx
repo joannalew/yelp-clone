@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class UserProfile extends Component {
     constructor() {
@@ -16,33 +17,61 @@ class UserProfile extends Component {
     }
 
     closeMenu() {
-        if (!this.dropdownMenu.contains(event.target)){
-            this.setState({showMenu: false}, () => {
-                document.removeEventListener('click', this.closeMenu);
-            });
+        if (this.dropdownMenu){
+            if (!this.dropdownMenu.contains(event.target)){
+                this.setState({showMenu: false}, () => {
+                    document.removeEventListener('click', this.closeMenu);
+                });
+            }
         }
     }
 
     render() {
         return (
-            <div>
-                <button onClick={this.showMenu}>
-                    Show menu
+            <div className="dropdown-align">
+                <button className="user-prof-btn" onClick={ this.showMenu }>
+                    <div className="user-prof-align">
+                        <img src="https://i.imgur.com/V6leSWg.png"></img>
+                        <i className="fas fa-caret-down"></i>
+                    </div>
                 </button>
-        
+
                 {
                     this.state.showMenu ? (
-                        <div className="menu" ref={ (el) => { this.dropdownMenu = el; } }>
-                            <button> Menu item 1 </button>
-                            <button> Menu item 2 </button>
-                            <button> Menu item 3 </button>
+                        <div>
+                            <div className="form-triangle">
+                                <i className="fas fa-caret-up fa-2x"></i>
+                            </div>
+                            <div className="user-drop-menu" 
+                                ref={ (el) => { this.dropdownMenu = el; }} >
+                                <div className="dropmenu-item-prof">
+                                    <div className="prof-pic">
+                                    </div>
+                                    <div className="prof-info">
+                                        <ul>
+                                            <li>
+                                                <Link to={'/'}>
+                                                    { this.props.currentUser.first_name + " " +
+                                                      this.props.currentUser.last_name[0] + "." }
+                                                </Link>
+                                            </li>
+                                            <li>{ this.props.currentUser.zip_code }</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div className="dropmenu-item-logout">
+                                    <button onClick={this.props.logout}>Log Out</button>
+                                </div>
+
+                            </div>
                         </div>
                     ) : (
                     null
                     )
                 }
             
-             </div>
+            </div>
         );
     }
 }
