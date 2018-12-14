@@ -7,6 +7,7 @@ const BusinessIndexItem = props => (
             <li>{props.business.business_name}</li>
             <li>{props.business.address}</li>
         </ul>
+        <img src={props.business.photo}></img>
     </div>
 );
 

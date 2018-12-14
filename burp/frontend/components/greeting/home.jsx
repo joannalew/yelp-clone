@@ -1,20 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import GreetingContainer from './greeting_container';
-import BusinessIndexContainer from '../business/business_index_container';
 
 const Home = () => (
     <div>
-        <BusinessIndexContainer />
-        <header>
+        <header className="main-header">
             <div className="header-image background-tint">
                 <div className="header-content">
                     <div className="nav-main">
                         <div className="nav-left">
                             <ul className="nav-content">
-                                <li className="header-item"><Link to={'/'}>Write a Review</Link></li>
-                                <li className="header-item"><Link to={'/'}>Events</Link></li>
-                                <li className="header-item"><Link to={'/'}>Talk</Link></li>
+                                <Link to={'/businesses'}><li className="header-item">Write a Review</li></Link>
+                                <Link to={'/'}><li className="header-item">Events</li></Link>
+                                <Link to={'/'}><li className="header-item">Talk</li></Link>
                             </ul>
                         </div>
                         <div className="nav-right">
@@ -55,7 +53,7 @@ const Home = () => (
                                         </label>
 
                                         <div className="search-submit search-end">
-                                            <button type="submit" value="Submit"><img src="https://i.imgur.com/WFG3srs.png"></img></button>
+                                            <button type="submit" value="Submit"><i className="fas fa-search fa-lg"></i></button>
                                         </div>
                                     </div>
                                 </div>
