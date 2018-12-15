@@ -162,7 +162,12 @@
     justify-content: space-between;
 }
 
-.fa-times {
+.error-close-btn {
     font-size: 24px;
-    color: #999;
+    color: #666;
+    opacity: 0.5;
+}
+
+.error-close-btn:hover {
+    opacity: 1;
 }

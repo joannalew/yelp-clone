@@ -27,7 +27,7 @@ const SearchBar = () => (
                     </label>
 
                     <div className="search-submit search-end">
-                        <button type="submit" value="Submit"><i className="fas fa-search fa-lg"></i></button>
+                        <button type="submit" value="Submit"><i className="material-icons">search</i></button>
                     </div>
                 </div>
             </div>

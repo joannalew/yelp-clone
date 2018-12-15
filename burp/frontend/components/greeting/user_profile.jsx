@@ -32,7 +32,7 @@ class UserProfile extends Component {
                 <button className="user-prof-btn" onClick={ this.showMenu }>
                     <div className="user-prof-align">
                         <img src="https://i.imgur.com/V6leSWg.png"></img>
-                        <i className="fas fa-caret-down"></i>
+                        <i className="material-icons arrow-dropdown">arrow_drop_down</i>
                     </div>
                 </button>
 
@@ -40,7 +40,7 @@ class UserProfile extends Component {
                     this.state.showMenu ? (
                         <div>
                             <div className="form-triangle">
-                                <i className="fas fa-caret-up fa-2x"></i>
+                                <div className="arrow-up"></div>
                             </div>
                             <div className="user-drop-menu" 
                                 ref={ (el) => { this.dropdownMenu = el; }} >

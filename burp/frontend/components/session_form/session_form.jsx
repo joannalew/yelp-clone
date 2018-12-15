@@ -30,7 +30,7 @@ class SessionForm extends React.Component {
                             ))}
                         </ul>
                         <button onClick={() => this.props.clearErrors()}>
-                            <i className="fas fa-times"></i>
+                            <i className="material-icons error-close-btn">close</i>
                         </button>
                     </div>
                 </div>

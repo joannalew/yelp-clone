@@ -34,9 +34,34 @@ class BusinessIndex extends React.Component {
                                 <GreetingContainer />
                             </div>
                         </div>
+                    </div>
 
-                    
-                        
+                    <div className="business-subheader">
+                        <div className="subheader-arrange">
+                            <Link to={'/businesses'}>
+                                <div className="business-subheader-item">
+                                    <span className="subheader-icon"><i className="material-icons">local_cafe</i></span>
+                                    <span>Breakfast</span>
+                                    <span className="subheader-icon"><i className="material-icons">expand_more</i></span>
+                                </div>
+                            </Link>
+
+                            <Link to={'/businesses'}>
+                                <div className="business-subheader-item">
+                                    <span className="subheader-icon"><i className="material-icons">fastfood</i></span>
+                                    <span>Lunch</span>
+                                    <span className="subheader-icon"><i className="material-icons">expand_more</i></span>
+                                </div>
+                            </Link>
+
+                            <Link to={'/businesses'}>
+                                <div className="business-subheader-item business-subheader-item-last">
+                                    <span className="subheader-icon"><i className="material-icons">restaurant</i></span>
+                                    <span>Dinner</span>
+                                    <span className="subheader-icon"><i className="material-icons">expand_more</i></span>
+                                </div>
+                            </Link>
+                        </div>
                     </div>
                 </header>
             </div>
