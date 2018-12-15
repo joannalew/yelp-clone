@@ -65,11 +65,14 @@
 .business-subheader {
     position: relative;
     background-color: #fafafa;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .subheader-arrange {
     max-width: 960px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .business-subheader-item {
@@ -77,6 +80,12 @@
     font-weight: 600;
     padding: 8px 12px;
     border-left: 1px solid #e6e6e6;
+    color: #333;
+}
+
+.business-subheader-item:hover {
+    color: #0073bb;
+    cursor: pointer;
 }
 
 .business-subheader-item-last {
@@ -90,3 +99,8 @@
 .subheader-icon {
     vertical-align: text-top;
 }
+
+.subheader-text{
+    font-size: 13px;
+}
+
