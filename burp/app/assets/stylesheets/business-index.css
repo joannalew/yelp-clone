@@ -1,0 +1,57 @@
+.business-main-header {
+    padding: 12px 0;
+    background-color: #d32323;
+    position: relative;
+}
+
+.business-header-arrange {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.business-header-logo {
+    width: 80px;
+    height: 40px;
+    background-image: url('https://i.imgur.com/EMl0MmA.png');
+    background-repeat: no-repeat;
+    background-size: 80px 40px;
+}
+
+.business-header-logo a {
+    font-size: 28px;
+    font-weight: 700;
+    color: transparent;
+}
+
+
+
+
+
+.business-header-search {
+    width: 71%;
+}
+
+.business-header-search span,
+.business-header-search button {
+    font-size: 14px !important;
+    padding: 8.5px 12px !important;
+}
+
+.business-header-search .search-desc {
+    padding-right: 0px !important;
+    color: #333;
+}
+
+.business-header-search .search-submit {
+    background-color: #bd1f1f;
+}
+
+.business-header-search .search-submit:hover {
+    background-color: #a71c1c;
+}
+

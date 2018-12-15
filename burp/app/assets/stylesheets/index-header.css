@@ -1,5 +1,5 @@
 .main-header {
-    min-width: 970px;
+    min-width: 1020px;
 }
 
 .header-image {
@@ -113,6 +113,9 @@
     color: transparent;
 }
 
+
+
+
 .header-search-elements {
     display: flex;
     flex-direction: row;
@@ -131,7 +134,6 @@
 .search-input, .search-input input {
     width: 100%;
 }
-
 
 .search-left:after {
     content: "";
