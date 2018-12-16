@@ -75,9 +75,9 @@ class SessionForm extends React.Component {
 
     formTitle() {
         if (this.props.formType === 'Sign Up'){
-            return (<h2 className="login-form-title">Sign Up for Burp</h2>)
+            return (<h2 className="login-form-title">Sign Up for Berp</h2>)
         }
-        return (<h2 className="login-form-title">Log In to Burp</h2>)
+        return (<h2 className="login-form-title">Log In to Berp</h2>)
     }
 
     formSubtitle() {
@@ -90,7 +90,7 @@ class SessionForm extends React.Component {
         }
         return (
             <p className="login-form-subtitle">
-                New to Burp? <Link to={'/signup'}>Sign up</Link>
+                New to Berp? <Link to={'/signup'}>Sign up</Link>
             </p>
         )
     }
@@ -106,13 +106,13 @@ class SessionForm extends React.Component {
         if (this.props.formType === 'Sign Up') {
             return (
                 <div className="login-form-redirect">
-                    Already have Burp? <Link to={'/login'}>Log in</Link>
+                    Already have Berp? <Link to={'/login'}>Log in</Link>
                 </div>
             )
         }
         return (
             <div className="login-form-redirect">
-                New to Burp? <Link to={'/signup'}>Sign up</Link>
+                New to Berp? <Link to={'/signup'}>Sign up</Link>
             </div>
         )
     }
@@ -167,7 +167,7 @@ class SessionForm extends React.Component {
                                 { this.formSubtitle() }
                                 <p className="login-legal">
                                     { this.formLegalText() }
-                                    you agree to see Burp's food pictures and feel strangely hungry.
+                                    you agree to see Berp's food pictures and feel strangely hungry.
                                 </p>
                             </div>
 

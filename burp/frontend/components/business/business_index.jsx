@@ -11,19 +11,19 @@ class BusinessIndex extends React.Component {
     }
 
     render() {
-        let businesses = this.props.businesses.map(business => {
+        let businesses = this.props.businesses.map((business, idx) => {
             return (
-                <BusinessIndexItem key={business.id} business={business} />
+                <BusinessIndexItem key={business.id} business={business} idx={idx + 1}/>
             )
         });
 
         return (
             <div>
-                <header className="main-header">
+                <div className="main-header">
                     <div className="business-main-header">
                         <div className="business-header-arrange">
                             <div className="business-header-logo">
-                                <Link to={'/'}>Bulrp</Link>
+                                <Link to={'/'}>Beerp</Link>
                             </div>
 
                             <div className="business-header-search">
@@ -35,6 +35,7 @@ class BusinessIndex extends React.Component {
                             </div>
                         </div>
                     </div>
+
 
                     <div className="business-subheader">
                         <div className="subheader-arrange">
@@ -75,7 +76,40 @@ class BusinessIndex extends React.Component {
                             </div>
                         </div>
                     </div>
-                </header>
+
+                    <div className="business-filter-bar">
+                        <div className="business-filter-content">
+                            <div className="business-filter-title">
+                                <span className="query-title">Best Restaurants</span> in San Francisco, CA
+                            </div>
+                            <div className="business-filter-count">
+                                <p>Showing 1-30 of 4400</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="business-main-content">
+                        <div className="business-main-arrange">
+                            <div className="business-main-list">
+                                <ul>
+                                    { businesses } 
+                                </ul>
+                            </div>
+                        
+                            <div className="business-index-map-container">
+                                dfsklfjs
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
             </div>
         );
     }
