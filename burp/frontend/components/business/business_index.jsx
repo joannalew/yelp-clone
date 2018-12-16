@@ -27,11 +27,11 @@ class BusinessIndex extends React.Component {
                             </div>
 
                             <div className="business-header-search">
-                                <SearchBar />
+                                <SearchBar placeholder="tacos, cheap dinner, Max's" />
                             </div>
 
                             <div className="greeting-buttons">
-                                <GreetingContainer />
+                                <GreetingContainer path='business' />
                             </div>
                         </div>
                     </div>
@@ -97,7 +97,15 @@ class BusinessIndex extends React.Component {
                             </div>
                         
                             <div className="business-index-map-container">
-                                dfsklfjs
+                                <div className="business-index-map sticky">
+                                    <div className="business-map-buttons">
+                                        <button>Mo' Map</button>
+                                        <button>Redo Search In Map</button>
+                                    </div>
+                                    <div className="business-map-google">
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

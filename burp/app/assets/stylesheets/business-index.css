@@ -33,7 +33,7 @@
 
 
 .business-header-search {
-    width: 73%;
+    width: 71%;
 }
 
 .business-header-search span {
@@ -151,4 +151,57 @@
     justify-content: space-between;
 }
 
+.business-main-arrange > div {
+    margin: 0px 15px;
+}
+
+
+
+
+
+
+.business-index-map {
+    border: 1px solid #e6e6e6;
+}
+
+.business-map-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+}
+
+.business-map-google{
+    height: 300px;
+    width: 298px;
+}
+
+.sticky {
+    position: sticky;
+    top: 18px;
+}
+
+
+.session-btns span {
+    padding: 8px 12px;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.session-login-btn {
+    color: #fff;
+    background: #d32323;
+    border: 1px solid #bd1f1f;
+    margin-right: 4px;
+}
+
+.session-login-btn:hover {
+    background: rgba(51,51,51,.3);
+}
+
+.session-signup-btn {
+    background: #f5f5f5;
+    color: #000;
+}
 

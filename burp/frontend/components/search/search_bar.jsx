@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchBar = () => (
+const SearchBar = props => (
     <div className="header-search">
         <form action="get" action="/" className="header-search-form">
             <div className="header-search-elements">
@@ -10,7 +10,7 @@ const SearchBar = () => (
                         <div className="search-left-inner">
                             <span className="search-desc search-start">Find</span>
                             <span className="search-input search-find">
-                                <input type="text" method="get" action="/" placeholder="burgers, barbers, spas, handymen..." />
+                                <input type="text" method="get" action="/" placeholder={props.placeholder} />
                             </span>
                         </div>
                     </label>

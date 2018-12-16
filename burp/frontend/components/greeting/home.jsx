@@ -17,7 +17,7 @@ const Home = () => (
                             </ul>
                         </div>
                         <div className="nav-right">
-                            <GreetingContainer />
+                            <GreetingContainer path='home' />
                         </div>
                     </div>
 
@@ -28,7 +28,7 @@ const Home = () => (
                             </h1>
                         </div>
 
-                        <SearchBar />
+                        <SearchBar placeholder="burgers, barbers, spas, handymen..."/>
                     </div>
                 </div>
             </div>
