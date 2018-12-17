@@ -1,0 +1,16 @@
+.stars-large-4 {
+    width: 132px;
+    height: 24px;
+    margin-right: 6px;
+    object-fit: none;
+    object-position: 0 -168px;
+}
+
+.stars-medium-4 {
+    width: 102px;
+    height: 18px;
+    margin-right: 6px;
+    object-fit: none;
+    object-position: 0px -366px;
+}
+

@@ -10,9 +10,9 @@ const BusinessIndexItem = props => (
                 </Link>
                 <div className="business-item-info">
                     <div className="business-item-info-left">
-                        <p className="business-item-title">{props.idx}. &nbsp; <Link to="/businesses">{props.business.business_name}</Link></p>
+                        <p className="business-item-title">{props.idx}. &nbsp; <Link to={`/biz/${props.business.id}`}>{props.business.business_name}</Link></p>
                         <p className="business-item-stars">
-                            <img className="business-review-stars" src="https://i.imgur.com/clbeOba.png"></img>
+                            <img className="stars-medium-4" src="https://i.imgur.com/UkZkm0D.png"></img>
                             400 reviews
                         </p>
                         <p className="business-item-categories">

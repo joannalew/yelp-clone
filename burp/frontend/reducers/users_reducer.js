@@ -12,7 +12,7 @@ const usersReducer = (oldState = {}, action) => {
         case RECEIVE_REVIEW:
             return merge({}, oldState, { [action.author.id]: action.author });
         case RECEIVE_BUSINESS:
-            return merge({}, state, action.authors);
+            return merge({}, oldState, action.authors);
         default:
             return oldState;
     }

@@ -1,0 +1,150 @@
+.business-show-top-shelf {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 24px;
+    margin-bottom: -18px;
+}
+
+.business-show-header {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.business-show-details {
+    padding-right: 30px;
+}
+
+.business-show-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+}
+
+.business-show-stars {
+    display: flex;
+    margin: 9px 0px;
+}
+
+.business-show-review-count {
+    color: #666;
+}
+
+.business-show-pricecat a {
+    color: #0073bb;
+}
+
+.business-show-pricecat a:hover {
+    text-decoration: underline;
+}
+
+
+
+.business-show-header-buttons {
+    vertical-align: middle;
+    display: flex;
+
+}
+
+.business-show-add-review {
+    display: inline-block !important;
+    color: white;
+    border-color: #8d0005;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    background-color: #d90007;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px 19px 9px 12px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    margin-right: 3px;
+}
+
+.business-show-add-review:hover {
+    background-color: #ec141a;
+}
+
+.business-show-add-review i {
+    width: 24px;
+    font-size: 20px;
+    margin-right: 3px;
+}
+
+.business-show-small-btns {
+    padding: 5px 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #666;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.business-show-small-btns button {
+    display: flex;
+    align-items: center;
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    color: #666;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.business-show-small-btns button:hover {
+    background-color: #fff;
+}
+
+.business-show-small-btns i {
+    font-size: 16px;
+    margin-right: 3px;
+}
+
+.business-show-small-btns button:first-child {
+    border-radius: 3px 0 0 3px;
+    border-right: none;
+}
+
+.business-show-small-btns button:last-child {
+    border-radius: 0 3px 3px 0;
+    border-left: none;
+}
+
+
+
+
+
+
+
+.business-show-main {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.business-show-main-content {
+    flex: 2;
+    padding-right: 30px;
+    border-right: 1px solid #e6e6e6;
+}
+
+.business-show-main-sidebar {
+    flex: 1;
+    padding-left: 30px;
+}
+
+.business-review-title {
+    display: inline;
+    font-weight: 700;
+    font-size: 21px;
+    color: #d32323;
+}
+
+.business-review-section-header {
+    color: #333;
+    font-size: 21px;
+}
