@@ -13,8 +13,8 @@ const Greeting = ({ currentUser, demoLogin, path }) => {
 
     const personalGreeting = () => (
         <ul className='welcome-user nav-content'>
-            <li className="header-icon"><Link to='/'><i className="material-icons">chat_bubble</i></Link></li>
-            <li className="header-icon"><Link to='/'><i className="material-icons">notifications</i></Link></li>
+            <Link to='/'><li className="header-icon"><i className="material-icons">chat_bubble</i></li></Link>
+            <Link to='/'><li className="header-icon"><i className="material-icons">notifications</i></li></Link>
             <UserProfileContainer />
         </ul>
     );

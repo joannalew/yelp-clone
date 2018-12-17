@@ -31,7 +31,7 @@ class UserProfile extends Component {
             <div className="dropdown-align">
                 <button className="user-prof-btn" onClick={ this.showMenu }>
                     <div className="user-prof-align">
-                        <img src="https://i.imgur.com/V6leSWg.png"></img>
+                        <img src={this.props.currentUser.photo}></img>
                         <i className="material-icons arrow-dropdown">arrow_drop_down</i>
                     </div>
                 </button>
@@ -45,8 +45,7 @@ class UserProfile extends Component {
                             <div className="user-drop-menu" 
                                 ref={ (el) => { this.dropdownMenu = el; }} >
                                 <div className="dropmenu-item-prof">
-                                    <div className="prof-pic">
-                                    </div>
+                                    <img className="prof-pic" src={ this.props.currentUser.photo }></img>
                                     <div className="prof-info">
                                         <ul>
                                             <li>

@@ -1,8 +1,12 @@
-.business-show-top-shelf {
+.business-show-border {
     background-color: #f5f5f5;
     border-bottom: 1px solid #e6e6e6;
-    padding-bottom: 24px;
-    margin-bottom: -18px;
+    position: absolute;
+    z-index: -1;
+    top: -9999px;
+    left: -9999px;
+    right: -9999px;
+    bottom: 0px;   
 }
 
 .business-show-header {
@@ -46,7 +50,6 @@
 .business-show-header-buttons {
     vertical-align: middle;
     display: flex;
-
 }
 
 .business-show-add-review {
@@ -116,6 +119,41 @@
 
 
 
+.business-show-subheader {
+    display: flex;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 18px 0 36px 0;
+}
+
+.business-show-mapbox {
+    flex: 1;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.business-show-showcase {
+    flex: 2;
+    vertical-align: middle;
+    background-color: yellow;
+    position: relative;
+    width: 660px;
+    height: 220px;
+}
+
+.business-mapbox-map {
+    overflow: hidden;
+    height: 135px;
+    border: 1px solid #ccc;
+    background-color: blue;
+}
+
+.business-mapbox-text {
+    min-height: 105px;
+}
+
 
 
 
@@ -147,4 +185,13 @@
 .business-review-section-header {
     color: #333;
     font-size: 21px;
+}
+
+
+
+
+.business-show-review {
+    margin: 0;
+    padding: 18px 0 17px 0;
+    border-bottom: 1px solid #e6e6e6;
 }
