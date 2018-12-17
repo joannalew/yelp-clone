@@ -3,7 +3,7 @@ json.review do
 end
 
 json.author do
-  json.partial! '/api/users/user', user: @review.user
+  json.partial! '/api/users/user', user: @review.author
 end
 
 json.average_rating @review.business.average_rating

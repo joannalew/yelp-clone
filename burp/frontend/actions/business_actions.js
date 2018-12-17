@@ -8,9 +8,11 @@ export const receiveBusinesses = businesses => ({
     businesses
 });
 
-export const receiveBusiness = business => ({
+export const receiveBusiness = ({ business, reviews, authors }) => ({
     type: RECEIVE_BUSINESS,
-    business
+    business,
+    reviews,
+    authors
 });
 
 export const fetchBusinesses = () => dispatch => (
