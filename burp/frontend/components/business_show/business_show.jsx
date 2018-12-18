@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BusinessHeader from '../business/business_header';
+import ReviewListItemContainer from './review_list_item_container';
 
 class BusinessShow extends React.Component {
     componentDidMount() {
@@ -8,7 +9,12 @@ class BusinessShow extends React.Component {
     }
 
     render() {
-        console.log(this.props);
+        const reviews = this.props.reviews.map(review => {
+            return (
+                <ReviewListItemContainer key={review.id} review={review} />
+            )
+        });
+
         return (
             <div>
                 <div className="main-header">
@@ -64,35 +70,27 @@ class BusinessShow extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                
+                    <div className="business-show-main">
+                        <div className="business-show-main-content">
+                            <div className="business-review-section-header">
+                                <h2 className="business-review-title">Recommended Reviews </h2>
+                                <span>for { this.props.business.business_name }</span>
+                            </div>
 
-                <div className="business-show-main">
-                    <div className="business-show-main-content">
-                        <div className="business-review-section-header">
-                            <h2 className="business-review-title">Recommended Reviews </h2>
-                            <span>for { this.props.business.business_name }</span>
+                            <div className="business-review-list-container">
+                                <ul className="business-review-list">
+                                    { reviews }
+                                </ul>
+                            </div>
                         </div>
 
-                        <div className="business-review-list-container">
-                            <ul className="business-review-list">
-                                <li className="business-show-review">
-                                    <div className="business-review-arrange">
-                                        <div className="business-review-user">
-                                            
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                        <div className="business-show-main-sidebar">
+                        sdfsd
                         </div>
                     </div>
-
-                    <div className="business-show-main-sidebar">
-                    sdfsd
-                    </div>
+                
                 </div>
-
-
-
             </div>
 
         );

@@ -12,7 +12,7 @@ end
 
     json.authors do 
         json.set! review.author.id do 
-            json.extract! review.author, :id, :first_name, :last_name, :email
+            json.partial! '/api/users/user', user: review.author
         end
     end
 end
