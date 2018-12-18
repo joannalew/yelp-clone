@@ -16,7 +16,7 @@ class BusinessShow extends React.Component {
         });
 
         return (
-            <div>
+            <div className="business-show-page">
                 <div className="main-header">
                     <BusinessHeader />
 

@@ -22,4 +22,27 @@
     object-position: 0px -366px;
 }
 
+.stars-medium-3 {
+    width: 102px;
+    height: 18px;
+    margin-right: 6px;
+    object-fit: none;
+    object-position: 0px -330px;
+}
+
+.stars-medium-2 {
+    width: 102px;
+    height: 18px;
+    margin-right: 6px;
+    object-fit: none;
+    object-position: 0px -294px; 
+}
+
+.stars-medium-1 {
+    width: 102px;
+    height: 18px;
+    margin-right: 6px;
+    object-fit: none;
+    object-position: 0px -258px;
+}
 
