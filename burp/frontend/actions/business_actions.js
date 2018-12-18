@@ -3,10 +3,11 @@ import * as BusinessApiUtil from '../util/business_api_util';
 export const RECEIVE_BUSINESSES = "RECEIVE_BUSINESSES";
 export const RECEIVE_BUSINESS = "RECEIVE_BUSINESS";
 
-export const receiveBusinesses = ({ businesses, reviews }) => ({
+export const receiveBusinesses = ({ businesses, reviews, authors }) => ({
     type: RECEIVE_BUSINESSES,
     businesses, 
-    reviews
+    reviews,
+    authors
 });
 
 export const receiveBusiness = ({ business, reviews, authors }) => ({

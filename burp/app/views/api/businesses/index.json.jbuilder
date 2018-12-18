@@ -12,5 +12,11 @@
                 json.partial! 'api/reviews/review', review: review
             end
         end
+
+        json.authors do 
+            json.set! review.author.id do 
+                json.partial! '/api/users/user', user: review.author
+            end
+        end
     end
 end

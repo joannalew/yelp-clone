@@ -27,7 +27,7 @@
 /config/master.key
 
 # ignore images
-/app/assets/images
+
 
 # bundle & node
 node_modules/

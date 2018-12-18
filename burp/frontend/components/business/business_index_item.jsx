@@ -18,7 +18,7 @@ const BusinessIndexItem = ({ business, reviews, idx }) => {
                             <p className="business-item-title">{ idx }. &nbsp; <Link to={`/biz/${ business.id }`}>{ business.business_name }</Link></p>
                             <p className="business-item-stars">
                                 <img className="stars-medium-4" src="https://i.imgur.com/UkZkm0D.png"></img>
-                                400 reviews
+                                <span>{ reviews.length } reviews </span>
                             </p>
                             <p className="business-item-categories">
                                 <span className="business-item-price">$$</span> 
