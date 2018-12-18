@@ -1,5 +1,5 @@
 import React from 'react';
-import BusinessIndexItem from './business_index_item';
+import BusinessIndexItemContainer from './business_index_item_container';
 import BusinessHeader from './business_header';
 
 
@@ -11,7 +11,7 @@ class BusinessIndex extends React.Component {
     render() {
         let businesses = this.props.businesses.map((business, idx) => {
             return (
-                <BusinessIndexItem key={business.id} business={business} idx={idx + 1}/>
+                <BusinessIndexItemContainer key={business.id} business={business} idx={idx + 1}/>
             )
         });
 

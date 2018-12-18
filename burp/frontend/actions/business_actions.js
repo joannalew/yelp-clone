@@ -3,9 +3,10 @@ import * as BusinessApiUtil from '../util/business_api_util';
 export const RECEIVE_BUSINESSES = "RECEIVE_BUSINESSES";
 export const RECEIVE_BUSINESS = "RECEIVE_BUSINESS";
 
-export const receiveBusinesses = businesses => ({
+export const receiveBusinesses = ({ businesses, reviews }) => ({
     type: RECEIVE_BUSINESSES,
-    businesses
+    businesses, 
+    reviews
 });
 
 export const receiveBusiness = ({ business, reviews, authors }) => ({
@@ -17,12 +18,12 @@ export const receiveBusiness = ({ business, reviews, authors }) => ({
 
 export const fetchBusinesses = () => dispatch => (
     BusinessApiUtil.fetchBusinesses()
-        .then(businesses => dispatch(receiveBusinesses(businesses)))
+        .then(payload => dispatch(receiveBusinesses(payload)))
 );
 
 export const fetchBusiness = id => dispatch => (
     BusinessApiUtil.fetchBusiness(id)
-        .then(business => dispatch(receiveBusiness(business)))
+        .then(payload => dispatch(receiveBusiness(payload)))
 );
 
 export const createBusiness = business => dispatch => (

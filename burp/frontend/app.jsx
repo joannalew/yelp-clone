@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store.js';
 import Root from './components/root';
 import { createReview, updateReview, deleteReview } from './actions/review_actions';
+import { fetchAllBusinesses } from './util/business_api_util';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -18,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.createReview = createReview;
   window.updateReview = updateReview;
   window.deleteReview = deleteReview;
+  window.fetchAllBusinesses = fetchAllBusinesses;
 
   ReactDOM.render(<Root store={store} />, root);
 });
