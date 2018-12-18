@@ -15,6 +15,8 @@ class BusinessShow extends React.Component {
             )
         });
 
+        const starClass = Math.floor(this.props.business.average_rating * 2);
+
         return (
             <div className="business-show-page">
                 <div className="main-header">
@@ -24,11 +26,11 @@ class BusinessShow extends React.Component {
                         <div className="business-show-details">
                             <p className="business-show-title">{ this.props.business.business_name }</p>
                             <p className="business-show-stars">
-                                <img className="stars-large-4" src="https://i.imgur.com/UkZkm0D.png"></img>
-                                <span className="business-show-review-count">400 reviews</span>
+                                <img className={`stars-large-${starClass}`} src="https://i.imgur.com/UkZkm0D.png"></img>
+                                <span className="business-show-review-count">{ this.props.reviews.length } reviews</span>
                             </p>
                             <p className="business-show-pricecat">
-                                <span className="business-item-price">$$</span>
+                                <span className="business-item-price">{ this.props.business.price }</span>
                                 <Link to={'/businesses'}>Category 1</Link>, &nbsp;
                                 <Link to={'/businesses'}>Category 2</Link>
                             </p>

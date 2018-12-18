@@ -1,5 +1,8 @@
+.login-content {
+    min-width: 1020px;;
+}
+
 .login-header {
-    min-width: 1020px;
     height: 40px;
     background-color: #d32323;
     position: relative;

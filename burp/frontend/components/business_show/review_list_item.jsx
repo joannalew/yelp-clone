@@ -14,7 +14,7 @@ const ReviewListItem = ({ review, author }) => {
 
             <div className="review-item-body">
                 <div className="review-item-stars">
-                    <img className={`stars-medium-${ rating }`} src="https://i.imgur.com/UkZkm0D.png"></img>
+                    <img className={`stars-medium-${ rating * 2 }`} src="https://i.imgur.com/UkZkm0D.png"></img>
                     <span className="review-item-date"> 
                         { review.updated_at.substring(5, 7) + '/' +
                          review.updated_at.substring(8, 10) + '/' +
