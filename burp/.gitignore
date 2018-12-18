@@ -26,6 +26,9 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+# ignore images
+/app/assets/images
+
 # bundle & node
 node_modules/
 bundle.js

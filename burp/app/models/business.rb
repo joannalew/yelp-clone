@@ -8,6 +8,7 @@ class Business < ApplicationRecord
         class_name: :Review
 
     has_one_attached :photo
+    has_many_attached :pics
 
     def average_rating
         reviews.average(:rating)

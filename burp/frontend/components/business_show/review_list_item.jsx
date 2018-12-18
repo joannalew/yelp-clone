@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ReviewListItem = ({ review , author}) => {
+const ReviewListItem = ({ review, author }) => {
     const { rating, body } = review;
     return (
         <li className="business-show-review">
