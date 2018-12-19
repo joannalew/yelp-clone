@@ -1,14 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ReviewListItem = ({ review, author }) => {
     const { rating, body } = review;
     return (
         <li className="business-show-review">
-            <div className="review-item-user-profile">
-                <img className="review-user-pic" src={author.photo}></img>
-                <div className="review-user-info">
-                    <p className="review-user-name">{author.first_name} {author.last_name[0]}.</p>
-                    <p className="review-user-zip">{author.zip_code}</p>
+            <div className="review-sidebar">
+                <div className="review-item-user-profile">
+                    <img className="review-user-pic" src={author.photo}></img>
+                    <div className="review-user-info">
+                        <p className="review-user-name">{author.first_name} {author.last_name[0]}.</p>
+                        <p className="review-user-zip">{author.zip_code}</p>
+                    </div>
+                </div>
+                <div className="review-sidebar-links">
+                    <Link to={'/'}><div className="review-link"><i class="material-icons">share</i><span>Share review</span></div></Link>
+                    <Link to={'/'}><div className="review-link"><i class="material-icons">code</i><span>Embed review</span></div></Link>
+                    <Link to={'/'}><div className="review-link"><i class="material-icons">create</i><span>Edit review</span></div></Link>
                 </div>
             </div>
 

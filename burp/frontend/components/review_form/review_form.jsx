@@ -76,7 +76,7 @@ class ReviewForm extends React.Component {
                         <div className="review-form-header">
                             <div className="review-form-header-left">
                                 <Link to={'/'}><div className="business-header-logo"></div></Link>
-                                <span className="review-form-header-title">Write a Review</span>
+                                <span className="review-form-header-title">{ this.props.formType } Review</span>
                             </div>
                             <div className="review-form-header-right">
                                 <GreetingContainer path='review' />
@@ -125,7 +125,7 @@ class ReviewForm extends React.Component {
 
                                 <div className="review-form-submit">
                                     <button className="review-form-submit-btn" onClick={ this.handleSubmit }>
-                                        <span>{ this.props.formType } Review</span>
+                                        <span>Post Review</span>
                                     </button>
                                 </div>
                             </form>

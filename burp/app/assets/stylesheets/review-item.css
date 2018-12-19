@@ -56,3 +56,33 @@
     color: #333;
     font-size: 14px;
 }
+
+
+.review-sidebar {
+    padding-right: 15px;
+}
+
+.review-sidebar-links {
+    margin-top: 8px;
+}
+
+.review-link {
+    display: flex;
+    align-items: center;
+    color: #0073bb;
+    font-size: 12px;
+    font-weight: 700;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.review-link i {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.review-link span {
+    border-top: 1px solid #e6e6e6;
+    width: 100%;
+    padding: 3px 0px;
+}
