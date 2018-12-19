@@ -37,10 +37,12 @@ class BusinessShow extends React.Component {
                         </div>
                         
                         <div className="business-show-header-buttons">
-                            <button className='business-show-add-review'>
-                                <i className="material-icons">star_rate</i>
-                                <span>Write a Review</span>
-                            </button>
+                            <Link to={`/biz/${this.props.businessId}/review`}>
+                                <button className='business-show-add-review'>
+                                    <i className="material-icons">star_rate</i>
+                                    <span>Write a Review</span>
+                                </button>
+                            </Link>
                             <span className="business-show-small-btns">
                                 <button className='business-btn-begin'>
                                     <i className="material-icons">add_a_photo</i>

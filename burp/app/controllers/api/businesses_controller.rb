@@ -15,6 +15,6 @@ class Api::BusinessesController < ApplicationController
     end
 
     def business_params
-        params.require(:business).permit(:business_name, :address, :city, :state, :zip_code, :latitude, :longitude, :phone, :website)
+        params.require(:business).permit(:business_name, :address, :city, :state, :zip_code, :latitude, :longitude, :phone, :website, :price)
     end
 end
