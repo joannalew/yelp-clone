@@ -66,6 +66,8 @@ class ReviewForm extends React.Component {
 
     render() {
         const placeholder = "Your review helps others learn about great local businesses.\n\nPlease don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees.";
+        const options = ["Select your rating", "Eek! Methinks not.", "Meh. I've experienced better.", "A-OK", "Yay! I'm a fan.", "Woohoo! As good as it gets!"];
+
         const business = this.props.businesses[this.props.match.params.businessId];
         if (business === undefined) { return <div></div> };
 
@@ -93,7 +95,7 @@ class ReviewForm extends React.Component {
                             <form onSubmit={ this.handleSubmit }>
                                 <div className="review-form-container">
                                     <div className="review-form-stars">
-                                        <ul id="starlist" className="review-form-stars-list stars-extra-large stars-extra-large-0">
+                                        <ul id="starlist" className={`review-form-stars-list stars-extra-large stars-extra-large-${ this.state.rating }`}>
                                             <li className="review-form-stars-container" onMouseEnter={ this.mouseEnter(1) } onMouseLeave={ this.mouseLeave() } >
                                                 <input type="radio" name="stars-input" value="1" onChange={ this.update('rating') } className="review-form-stars-input"/>
                                             </li>
@@ -111,7 +113,7 @@ class ReviewForm extends React.Component {
                                             </li>
                                         </ul>
                                         <span className="review-form-stars-description">
-                                            <p id="rating-text">Select your rating</p>
+                                            <p id="rating-text">{ options[this.state.rating] }</p>
                                         </span>
                                     </div>
 

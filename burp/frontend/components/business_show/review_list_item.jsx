@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ReviewListItem = ({ review, author }) => {
+const ReviewListItem = ({ business, review, author }) => {
     const { rating, body } = review;
     return (
         <li className="business-show-review">
@@ -13,11 +13,11 @@ const ReviewListItem = ({ review, author }) => {
                         <p className="review-user-zip">{author.zip_code}</p>
                     </div>
                 </div>
-                <div className="review-sidebar-links">
-                    <Link to={'/'}><div className="review-link"><i class="material-icons">share</i><span>Share review</span></div></Link>
-                    <Link to={'/'}><div className="review-link"><i class="material-icons">code</i><span>Embed review</span></div></Link>
-                    <Link to={'/'}><div className="review-link"><i class="material-icons">create</i><span>Edit review</span></div></Link>
-                </div>
+                <ul className="review-sidebar-links">
+                    <li><Link to={'/'}><div className="review-link"><i className="material-icons">share</i><span className="review-first-link">Share review</span></div></Link></li>
+                    <li><Link to={'/'}><div className="review-link"><i className="material-icons">code</i><span>Embed review</span></div></Link></li>
+                    <li><Link to={`/biz/${business.id}/edit/${review.id}`}><div className="review-link"><i className="material-icons">create</i><span>Edit review</span></div></Link></li>
+                </ul>
             </div>
 
             <div className="review-item-body">

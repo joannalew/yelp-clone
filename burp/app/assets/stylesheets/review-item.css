@@ -60,6 +60,7 @@
 
 .review-sidebar {
     padding-right: 15px;
+    flex: 1;
 }
 
 .review-sidebar-links {
@@ -85,4 +86,12 @@
     border-top: 1px solid #e6e6e6;
     width: 100%;
     padding: 3px 0px;
+}
+
+.review-first-link {
+    border-top: none !important;
+}
+
+.review-link span:hover {
+    text-decoration: underline;
 }

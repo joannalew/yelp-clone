@@ -166,6 +166,7 @@
 
 .business-show-main-content {
     flex: 2;
+    min-width: 660px;
     padding-right: 30px;
     border-right: 1px solid #e6e6e6;
 }

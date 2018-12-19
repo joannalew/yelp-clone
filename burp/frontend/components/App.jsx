@@ -18,7 +18,7 @@ const App = () => (
         <Route exact path="/businesses" component={BusinessIndexContainer} />
         <Route exact path="/biz/:businessId" component={BusinessShowContainer} />
         <Route exact path="/biz/:businessId/review" component={CreateReviewFormContainer} />
-        <Route exact path="/biz/:businessId/review/:reviewId" component={EditReviewFormContainer} />
+        <Route exact path="/biz/:businessId/edit/:reviewId" component={EditReviewFormContainer} />
     </div>
 );
 

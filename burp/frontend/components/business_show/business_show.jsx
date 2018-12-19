@@ -11,7 +11,7 @@ class BusinessShow extends React.Component {
     render() {
         const reviews = this.props.reviews.map(review => {
             return (
-                <ReviewListItemContainer key={review.id} review={review} />
+                <ReviewListItemContainer key={review.id} review={review} business={this.props.business}/>
             )
         });
 
