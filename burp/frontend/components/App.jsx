@@ -6,7 +6,8 @@ import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
 import BusinessIndexContainer from './business/business_index_container';
 import BusinessShowContainer from './business_show/business_show_container';
-import ReviewFormContainer from './review_form/review_form_container';
+import CreateReviewFormContainer from './review_form/create_review_form_container';
+import EditReviewFormContainer from './review_form/edit_review_form_container';
 
 
 const App = () => (
@@ -16,7 +17,8 @@ const App = () => (
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <Route exact path="/businesses" component={BusinessIndexContainer} />
         <Route exact path="/biz/:businessId" component={BusinessShowContainer} />
-        <Route path="/biz/:businessId/review" component={ReviewFormContainer} />
+        <Route exact path="/biz/:businessId/review" component={CreateReviewFormContainer} />
+        <Route exact path="/biz/:businessId/review/:reviewId" component={EditReviewFormContainer} />
     </div>
 );
 

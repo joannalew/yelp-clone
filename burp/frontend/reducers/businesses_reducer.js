@@ -11,7 +11,7 @@ const businessesReducer = (oldState = {}, action) => {
             return merge({}, oldState, {[action.business.id]: action.business});
         case RECEIVE_REVIEW:
             const { review, average_rating } = action;
-            const newState = merge({}, oldstate);
+            const newState = merge({}, oldState);
             newState[review.business_id].reviewIds.push(review.id);
             newState[review.business_id].average_rating = average_rating;
             return newState;

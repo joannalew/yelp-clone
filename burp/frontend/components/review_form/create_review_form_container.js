@@ -4,11 +4,14 @@ import { fetchBusiness } from '../../actions/business_actions';
 import ReviewForm from './review_form';
 
 const mapStateToProps = state => ({  
-    businesses: state.entities.businesses
+    businesses: state.entities.businesses,
+    currentUser: state.entities.users[state.session.id],
+    review: {body: '', rating: 0},
+    formType: 'Post'
 });
 
 const mapDispatchToProps = dispatch => ({
-    createReview: review => dispatch(createReview(review)),
+    action: review => dispatch(createReview(review)),
     fetchBusiness: id => dispatch(fetchBusiness(id))
 });
 

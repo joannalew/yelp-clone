@@ -5,11 +5,35 @@ import GreetingContainer from '../greeting/greeting_container';
 class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { body: '', rating: 0 }
+        this.state = this.props.review;
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchBusiness(this.props.match.params.businessId);
+    }
+
+    update(field) {
+        return e => this.setState({ [field]: e.target.value })
+    }
+
+    navigateToBusinessShow() {
+        const url = `/biz/${this.props.match.params.businessId}`;
+        this.props.history.push(url); 
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+    
+        const res = {
+            body: this.state.body,
+            rating: parseInt(this.state.rating),
+            user_id: this.props.currentUser.id,
+            business_id: this.props.match.params.businessId
+        }
+        
+        this.props.action(res);
+        this.navigateToBusinessShow();
     }
 
     render() {
@@ -38,24 +62,24 @@ class ReviewForm extends React.Component {
                         </div>
 
                         <div>
-                            <form action="">
+                            <form onSubmit={ this.handleSubmit }>
                                 <div className="review-form-container">
                                     <div className="review-form-stars">
                                         <ul className="review-form-stars-list stars-extra-large stars-extra-large-2">
                                             <li className="review-form-stars-container">
-                                                <input className="review-form-stars-input" name="stars" type="radio"/>
+                                                <input type="radio" name="stars-input" value="1" onChange={ this.update('rating') } className="review-form-stars-input"/>
                                             </li>
                                             <li className="review-form-stars-container">
-                                                <input className="review-form-stars-input" name="stars" type="radio"/>
+                                                <input type="radio" name="stars-input" value="2" onChange={ this.update('rating') } className="review-form-stars-input"/>
                                             </li>
                                             <li className="review-form-stars-container">
-                                                <input className="review-form-stars-input" name="stars" type="radio"/>
+                                                <input type="radio" name="stars-input" value="3" onChange={ this.update('rating') } className="review-form-stars-input"/>
                                             </li>
                                             <li className="review-form-stars-container">
-                                                <input className="review-form-stars-input" name="stars" type="radio"/>
+                                                <input type="radio" name="stars-input" value="4" onChange={ this.update('rating') } className="review-form-stars-input"/>
                                             </li>
                                             <li className="review-form-stars-container">
-                                                <input className="review-form-stars-input" name="stars" type="radio"/>
+                                                <input type="radio" name="stars-input" value="5" onChange={ this.update('rating') } className="review-form-stars-input"/>
                                             </li>
                                         </ul>
                                         <span className="review-form-stars-description">
@@ -63,15 +87,17 @@ class ReviewForm extends React.Component {
                                         </span>
                                     </div>
 
-                                    <textarea className="review-form-content" maxLength="5000" placeholder={ placeholder }></textarea>
+                                    <textarea className="review-form-content" maxLength="5000" placeholder={ placeholder } 
+                                              value={ this.state.body } onChange={ this.update('body') }>
+                                    </textarea>
 
                                     <div className="review-form-error-messages">
                                     </div>
                                 </div>
 
                                 <div className="review-form-submit">
-                                    <button className="review-form-submit-btn">
-                                        <span>Post Review</span>
+                                    <button className="review-form-submit-btn" onClick={ this.handleSubmit }>
+                                        <span>{ this.props.formType } Review</span>
                                     </button>
                                 </div>
                             </form>
