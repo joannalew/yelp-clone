@@ -26,7 +26,7 @@ class BusinessShow extends React.Component {
                         <div className="business-show-details">
                             <p className="business-show-title">{ this.props.business.business_name }</p>
                             <p className="business-show-stars">
-                                <img className={`stars-large-${starClass}`} src="https://i.imgur.com/UkZkm0D.png"></img>
+                                <img className={`stars-large-${starClass}` + ' stars-large'} src="https://i.imgur.com/UkZkm0D.png"></img>
                                 <span className="business-show-review-count">{ this.props.reviews.length } reviews</span>
                             </p>
                             <p className="business-show-pricecat">

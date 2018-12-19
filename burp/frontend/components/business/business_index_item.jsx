@@ -18,7 +18,7 @@ const BusinessIndexItem = ({ business, reviews, idx }) => {
                         <div className="business-item-info-left">
                             <p className="business-item-title">{ idx }. &nbsp; <Link to={`/biz/${ business.id }`}>{ business.business_name }</Link></p>
                             <p className="business-item-stars">
-                                <img className={`stars-medium-${starRating}`} src="https://i.imgur.com/UkZkm0D.png"></img>
+                                <img className={`stars-medium-${starRating}` + ' stars-medium'} src="https://i.imgur.com/UkZkm0D.png"></img>
                                 <span>{ reviews.length } reviews </span>
                             </p>
                             <p className="business-item-categories">

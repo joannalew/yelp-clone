@@ -19,6 +19,12 @@ const Greeting = ({ currentUser, demoLogin, path }) => {
         </ul>
     );
 
+    const personalGreetingWithoutBtns = () => (
+        <ul className='welcome-user nav-content'>
+            <UserProfileContainer />
+        </ul>
+    );
+
     const sessionButtons = () => (
         <div className="session-btns">
             <Link to='/login'><span className="session-login-btn">Log In</span></Link>
@@ -26,9 +32,11 @@ const Greeting = ({ currentUser, demoLogin, path }) => {
         </div>
     );
 
-    if (currentUser) 
+    if (currentUser && path != 'review') 
         return personalGreeting();
-    else if (path === 'business')
+    else if (currentUser)
+        return personalGreetingWithoutBtns();
+    else if (path === 'business' || path === 'review')
         return sessionButtons();
     else
         return sessionLinks();

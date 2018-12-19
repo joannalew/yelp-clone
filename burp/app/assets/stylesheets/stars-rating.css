@@ -1,162 +1,132 @@
-.stars-large-0 {
+.stars-extra-large {
+    width: 162px;
+    height: 30px;
+    background-image: url('https://i.imgur.com/Xg9ghe7.png');
+    background-size: 162px 180px;
+    background-repeat: no-repeat;
+}
+
+.stars-extra-large-0 {
+    background-position: 0 0;
+}
+
+.stars-extra-large-1 {
+    background-position: 0 -30px;
+}
+
+.stars-extra-large-2 {
+    background-position: 0 -60px;
+}
+
+.stars-extra-large-3 {
+    background-position: 0 -90px;
+}
+
+.stars-extra-large-4 {
+    background-position: 0 -120px;
+}
+
+.stars-extra-large-5 {
+    background-position: 0 -150px;
+}
+
+
+
+
+
+.stars-large {
     width: 132px;
     height: 24px;
     margin-right: 6px;
     object-fit: none;
+}
+
+.stars-large-0 {
     object-position: 0 0;
 }
 
 .stars-large-2 {
-    width: 132px;
-    height: 24px;
-    margin-right: 6px;
-    object-fit: none;
     object-position: 0 -24px;
 }
 
 .stars-large-3 {
-    width: 132px;
-    height: 24px;
-    margin-right: 6px;
-    object-fit: none;
     object-position: 0 -48px;
 }
 
 .stars-large-4 {
-    width: 132px;
-    height: 24px;
-    margin-right: 6px;
-    object-fit: none;
     object-position: 0 -72px;
 }
 
 .stars-large-5 {
-    width: 132px;
-    height: 24px;
-    margin-right: 6px;
-    object-fit: none;
     object-position: 0 -96px;
 }
 
 .stars-large-6 {
-    width: 132px;
-    height: 24px;
-    margin-right: 6px;
-    object-fit: none;
     object-position: 0 -120px;
 }
 
 .stars-large-7 {
-    width: 132px;
-    height: 24px;
-    margin-right: 6px;
-    object-fit: none;
     object-position: 0 -144px;
 }
 
 .stars-large-8 {
-    width: 132px;
-    height: 24px;
-    margin-right: 6px;
-    object-fit: none;
     object-position: 0 -168px;
 }
 
 .stars-large-9 {
-    width: 132px;
-    height: 24px;
-    margin-right: 6px;
-    object-fit: none;
     object-position: 0 -192px;
 }
 
 .stars-large-10 {
-    width: 132px;
-    height: 24px;
-    margin-right: 6px;
-    object-fit: none;
     object-position: 0 -216px;
 }
 
 
 
-.stars-medium-0 {
+.stars-medium {
     width: 102px;
     height: 18px;
     margin-right: 6px;
     object-fit: none;
+}
+
+.stars-medium-0 {
     object-position: 0px -240px;
 }
 
 .stars-medium-2 {
-    width: 102px;
-    height: 18px;
-    margin-right: 6px;
-    object-fit: none;
     object-position: 0px -258px;
 }
 
 .stars-medium-3 {
-    width: 102px;
-    height: 18px;
-    margin-right: 6px;
-    object-fit: none;
     object-position: 0px -376px;
 }
 
 .stars-medium-4 {
-    width: 102px;
-    height: 18px;
-    margin-right: 6px;
-    object-fit: none;
     object-position: 0px -294px; 
 }
 
 .stars-medium-5 {
-    width: 102px;
-    height: 18px;
-    margin-right: 6px;
-    object-fit: none;
     object-position: 0px -312px;
 }
 
 .stars-medium-6 {
-    width: 102px;
-    height: 18px;
-    margin-right: 6px;
-    object-fit: none;
     object-position: 0px -330px;
 }
 
 .stars-medium-7 {
-    width: 102px;
-    height: 18px;
-    margin-right: 6px;
-    object-fit: none;
     object-position: 0px -348px;
 }
 
 .stars-medium-8 {
-    width: 102px;
-    height: 18px;
-    margin-right: 6px;
-    object-fit: none;
     object-position: 0px -366px;
 }
 
 .stars-medium-9 {
-    width: 102px;
-    height: 18px;
-    margin-right: 6px;
-    object-fit: none;
     object-position: 0 -384px;
 }
 
 .stars-medium-10 {
-    width: 102px;
-    height: 18px;
-    margin-right: 6px;
-    object-fit: none;
     object-position: 0 -402px;
 }
 

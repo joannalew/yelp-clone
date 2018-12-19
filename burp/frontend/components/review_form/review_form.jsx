@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import UserProfileContainer from '../greeting/user_profile_container';
+import GreetingContainer from '../greeting/greeting_container';
 
 class ReviewForm extends React.Component {
     constructor(props) {
@@ -27,7 +27,7 @@ class ReviewForm extends React.Component {
                                 <span className="review-form-header-title">Write a Review</span>
                             </div>
                             <div className="review-form-header-right">
-                                <UserProfileContainer />
+                                <GreetingContainer path='review' />
                             </div>
                         </div>
                     </div>
@@ -41,29 +41,38 @@ class ReviewForm extends React.Component {
                             <form action="">
                                 <div className="review-form-container">
                                     <div className="review-form-stars">
-                                        <ul className="review-form-stars-list">
+                                        <ul className="review-form-stars-list stars-extra-large stars-extra-large-2">
                                             <li className="review-form-stars-container">
-                                                <input className="review-form-stars-input" type="radio"/>
+                                                <input className="review-form-stars-input" name="stars" type="radio"/>
                                             </li>
                                             <li className="review-form-stars-container">
-                                                <input className="review-form-stars-input" type="radio"/>
+                                                <input className="review-form-stars-input" name="stars" type="radio"/>
                                             </li>
                                             <li className="review-form-stars-container">
-                                                <input className="review-form-stars-input" type="radio"/>
+                                                <input className="review-form-stars-input" name="stars" type="radio"/>
                                             </li>
                                             <li className="review-form-stars-container">
-                                                <input className="review-form-stars-input" type="radio"/>
+                                                <input className="review-form-stars-input" name="stars" type="radio"/>
                                             </li>
                                             <li className="review-form-stars-container">
-                                                <input className="review-form-stars-input" type="radio"/>
+                                                <input className="review-form-stars-input" name="stars" type="radio"/>
                                             </li>
                                         </ul>
+                                        <span className="review-form-stars-description">
+                                            <p>Select your rating</p>
+                                        </span>
                                     </div>
 
                                     <textarea className="review-form-content" maxLength="5000" placeholder={ placeholder }></textarea>
 
                                     <div className="review-form-error-messages">
                                     </div>
+                                </div>
+
+                                <div className="review-form-submit">
+                                    <button className="review-form-submit-btn">
+                                        <span>Post Review</span>
+                                    </button>
                                 </div>
                             </form>
                         </div>
