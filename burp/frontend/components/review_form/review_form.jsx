@@ -7,6 +7,7 @@ class ReviewForm extends React.Component {
         super(props);
         this.state = this.props.review;
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.mouseEnter = this.mouseEnter.bind(this);
     }
 
     componentDidMount() {
@@ -20,6 +21,33 @@ class ReviewForm extends React.Component {
     navigateToBusinessShow() {
         const url = `/biz/${this.props.match.params.businessId}`;
         this.props.history.push(url); 
+    }
+
+    starListClass(index) {
+        const element = document.getElementById('starlist');
+        const lastClass = element.classList[element.classList.length - 1];
+        element.classList.remove(lastClass);
+        element.classList.add('stars-extra-large-' + index);
+    }
+
+    ratingTextContent(index) {
+        const options = ["Select your rating", "Eek! Methinks not.", "Meh. I've experienced better.", "A-OK", "Yay! I'm a fan.", "Woohoo! As good as it gets!"];
+        const element = document.getElementById('rating-text');
+        element.innerHTML = options[index];
+    }
+
+    mouseEnter(index){
+        return () => { 
+            this.starListClass(index);
+            this.ratingTextContent(index);
+        };
+    }
+
+    mouseLeave(){
+        return () => { 
+            this.starListClass(this.state.rating);
+            this.ratingTextContent(this.state.rating);
+        };
     }
 
     handleSubmit(e) {
@@ -65,25 +93,25 @@ class ReviewForm extends React.Component {
                             <form onSubmit={ this.handleSubmit }>
                                 <div className="review-form-container">
                                     <div className="review-form-stars">
-                                        <ul className="review-form-stars-list stars-extra-large stars-extra-large-2">
-                                            <li className="review-form-stars-container">
+                                        <ul id="starlist" className="review-form-stars-list stars-extra-large stars-extra-large-0">
+                                            <li className="review-form-stars-container" onMouseEnter={ this.mouseEnter(1) } onMouseLeave={ this.mouseLeave() } >
                                                 <input type="radio" name="stars-input" value="1" onChange={ this.update('rating') } className="review-form-stars-input"/>
                                             </li>
-                                            <li className="review-form-stars-container">
+                                            <li className="review-form-stars-container" onMouseEnter={ this.mouseEnter(2) } onMouseLeave={ this.mouseLeave() }>
                                                 <input type="radio" name="stars-input" value="2" onChange={ this.update('rating') } className="review-form-stars-input"/>
                                             </li>
-                                            <li className="review-form-stars-container">
+                                            <li className="review-form-stars-container" onMouseEnter={ this.mouseEnter(3) } onMouseLeave={ this.mouseLeave() }>
                                                 <input type="radio" name="stars-input" value="3" onChange={ this.update('rating') } className="review-form-stars-input"/>
                                             </li>
-                                            <li className="review-form-stars-container">
+                                            <li className="review-form-stars-container" onMouseEnter={ this.mouseEnter(4) } onMouseLeave={ this.mouseLeave() }>
                                                 <input type="radio" name="stars-input" value="4" onChange={ this.update('rating') } className="review-form-stars-input"/>
                                             </li>
-                                            <li className="review-form-stars-container">
+                                            <li className="review-form-stars-container" onMouseEnter={ this.mouseEnter(5) } onMouseLeave={ this.mouseLeave() }>
                                                 <input type="radio" name="stars-input" value="5" onChange={ this.update('rating') } className="review-form-stars-input"/>
                                             </li>
                                         </ul>
                                         <span className="review-form-stars-description">
-                                            <p>Select your rating</p>
+                                            <p id="rating-text">Select your rating</p>
                                         </span>
                                     </div>
 
