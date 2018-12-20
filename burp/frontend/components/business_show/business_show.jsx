@@ -8,6 +8,71 @@ class BusinessShow extends React.Component {
         this.props.fetchBusiness( this.props.businessId );
     }
 
+    starListClass(index) {
+        const element = document.getElementById('starmake');
+        const lastClass = element.classList[element.classList.length - 1];
+        element.classList.remove(lastClass);
+        element.classList.add('stars-extra-large-' + index);
+    }
+
+    mouseEnter(index){
+        return () => { this.starListClass(index); };
+    }
+
+    mouseLeave(){
+        return () => { this.starListClass(0); };
+    }
+
+    getStarsComponent(bool) {
+        if (bool) {
+            return (
+                <li className="business-show-review">
+                    <div className="review-sidebar">
+                        <div className="review-item-user-profile">
+                            <img className="review-user-pic" src={currentUser.photo}></img>
+                            <div className="review-user-info">
+                                <p className="review-user-name">{currentUser.first_name} {currentUser.last_name[0]}.</p>
+                                <p className="review-user-zip">{currentUser.zip_code}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="review-item-body">
+                        <div className="create-review-stars-container">
+                            <div className="space-after-line">
+                                <div className="create-review-stars">
+                                    <ul id="starmake" className={`review-form-stars-list stars-extra-large stars-extra-large-0`}>
+                                        <li className="review-form-stars-container" onMouseEnter={ this.mouseEnter(1) } onMouseLeave={ this.mouseLeave() }>
+                                            <input type="radio" name="stars-input" value="1" className="review-form-stars-input"/>
+                                        </li>
+                                        <li className="review-form-stars-container" onMouseEnter={ this.mouseEnter(2) } onMouseLeave={ this.mouseLeave() }>
+                                            <input type="radio" name="stars-input" value="2" className="review-form-stars-input"/>
+                                        </li>
+                                        <li className="review-form-stars-container" onMouseEnter={ this.mouseEnter(3) } onMouseLeave={ this.mouseLeave() }>
+                                            <input type="radio" name="stars-input" value="3" className="review-form-stars-input"/>
+                                        </li>
+                                        <li className="review-form-stars-container" onMouseEnter={ this.mouseEnter(4) } onMouseLeave={ this.mouseLeave() }>
+                                            <input type="radio" name="stars-input" value="4" className="review-form-stars-input"/>
+                                        </li>
+                                        <li className="review-form-stars-container" onMouseEnter={ this.mouseEnter(5) } onMouseLeave={ this.mouseLeave() }>
+                                            <input type="radio" name="stars-input" value="5" className="review-form-stars-input"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <span className="create-review-link">
+                                <Link to={`/biz/${this.props.business.id}/review`}>Start your review of <span className="bold">{ this.props.business.business_name }.</span></Link>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            )
+        }
+        else{
+            return (<div></div>)
+        }
+    }
+
     render() {
         const starClass = Math.floor(this.props.business.average_rating * 2);
         const reviews = this.props.reviews.map(review => {
@@ -18,10 +83,14 @@ class BusinessShow extends React.Component {
 
         let buttonTitle = "Write a Review";
         let buttonLink = `/biz/${this.props.businessId}/review`;
+        let starsComponent = true;
+        if (!this.props.currentUser) { starsComponent = false; }
+
         for(let i = 0; i < this.props.reviews.length; i++){
             if (this.props.currentUser && this.props.reviews[i].user_id === this.props.currentUser.id) { 
                 buttonTitle = "Edit My Review"; 
                 buttonLink = `/biz/${this.props.businessId}/edit/${this.props.reviews[i].id}`;
+                starsComponent = false;
             };
         }
 
@@ -92,6 +161,7 @@ class BusinessShow extends React.Component {
 
                             <div className="business-review-list-container">
                                 <ul className="business-review-list">
+                                    { this.getStarsComponent(starsComponent) }
                                     { reviews }
                                 </ul>
                             </div>
