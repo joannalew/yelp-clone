@@ -8,7 +8,28 @@
     background-size: cover;
     background-position: 50%;
     height: 570px;
-    background-image: url('https://bit.ly/2QeN1gZ');
+}
+
+.header-image-0 {
+    background-image: url('splash/splash0.jpg')
+}
+.header-image-1 {
+    background-image: url('splash/splash1.jpg')
+}
+.header-image-2 {
+    background-image: url('splash/splash2.jpg')
+}
+.header-image-3 {
+    background-image: url('splash/splash3.jpg')
+}
+.header-image-4 {
+    background-image: url('splash/splash4.jpg')
+}
+.header-image-5 {
+    background-image: url('splash/splash5.jpg')
+}
+.header-image-6 {
+    background-image: url('splash/splash6.jpg')
 }
 
 .background-tint {
@@ -108,7 +129,7 @@
     background-position: center;
     background-repeat: no-repeat;
     padding: 0;
-    margin: 0 auto 48px;
+    margin: 0 auto;
 }
 
 .header-logo a {
