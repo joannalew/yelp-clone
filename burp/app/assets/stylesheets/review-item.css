@@ -95,3 +95,38 @@
 .review-link span:hover {
     text-decoration: underline;
 }
+
+
+
+
+
+
+.review-item-footer-arrange {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.review-item-footer-arrange button {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.review-item-footer-arrange button:hover {
+    background-color: rgba(209, 209, 209, 0.4);
+}
+
+.review-item-footer-arrange button:hover i {
+    color: black;
+}
+
+.review-item-footer-arrange span {
+    display: flex;
+    align-items: center;
+}
+
+.review-item-footer-arrange i {
+    font-size: 18px;
+    color: #666;
+}
+

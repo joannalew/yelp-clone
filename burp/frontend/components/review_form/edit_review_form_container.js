@@ -4,15 +4,14 @@ import ReviewForm from './review_form';
 import { updateReview } from '../../actions/review_actions';
 import { fetchBusiness } from '../../actions/business_actions';
 
-const mapStateToProps = (state, ownProps) => {
-    console.log(ownProps);
-    return{
+const mapStateToProps = (state, ownProps) => ({
     businesses: state.entities.businesses,
     currentUser: state.entities.users[state.session.id],
     review: state.entities.reviews[ownProps.match.params.reviewId],
     formType: 'Edit Your',
-    match: {params: {businessId: ownProps.match.params.businessId} }
-}};
+    match: ownProps.match,
+    history: ownProps.history
+});
 
 const mapDispatchToProps = dispatch => ({
     action: review => dispatch(updateReview(review)),

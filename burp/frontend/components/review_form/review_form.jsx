@@ -1,17 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import GreetingContainer from '../greeting/greeting_container';
 
 class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this.props.review;
+        this.state = {};
         this.handleSubmit = this.handleSubmit.bind(this);
         this.mouseEnter = this.mouseEnter.bind(this);
+        this.navigateToBusinessShow = this.navigateToBusinessShow.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchBusiness(this.props.match.params.businessId);
+        this.setState({ ...this.props.review });
+    }
+    
+    componentDidUpdate(preProps) {
+        if (preProps.review !== this.props.review) { this.setState({...this.props.review}) }
     }
 
     update(field) {
@@ -60,8 +66,7 @@ class ReviewForm extends React.Component {
             business_id: this.props.match.params.businessId
         }
         
-        this.props.action(res);
-        this.navigateToBusinessShow();
+        this.props.action(res).then(() => this.navigateToBusinessShow());
     }
 
     render() {
@@ -140,4 +145,4 @@ class ReviewForm extends React.Component {
     }
 }
 
-export default ReviewForm;
+export default withRouter(ReviewForm);

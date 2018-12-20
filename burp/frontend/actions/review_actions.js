@@ -12,7 +12,7 @@ export const receiveReview = ({ review, average_rating, author }) => ({
 
 export const removeReview = payload => ({
     type: REMOVE_REVIEW,
-    reviewId: payload.review.id
+    review: payload.review
 });
 
 export const createReview = review => dispatch => (

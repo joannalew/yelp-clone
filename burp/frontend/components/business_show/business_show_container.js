@@ -9,7 +9,8 @@ const mapStateToProps = (state, ownProps) => {
     const business = selectBusiness(state.entities, businessId);
     const reviews = selectReviewsForBusiness(state.entities, business);
     
-    return { businessId, business, reviews };
+    return { currentUser: state.entities.users[state.session.id],
+             businessId, business, reviews };
 };
 
 const mapDispatchToProps = dispatch => ({

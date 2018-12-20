@@ -1,8 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ReviewListItem = ({ business, review, author }) => {
+const ReviewListItem = ({ business, review, author, currentUser, deleteReview }) => {
     const { rating, body } = review;
+    const clickHandler = (id) => { return () => deleteReview(id); };
+
+    const editLink = () => {
+        if (currentUser && review.user_id === currentUser.id){
+            return (<li><Link to={`/biz/${business.id}/edit/${review.id}`}><div className="review-link"><i className="material-icons">create</i><span>Edit review</span></div></Link></li>)
+        }
+        else { return (<div></div>) }
+    };
+
+    const deleteBtn = () => {
+        if (currentUser && review.user_id === currentUser.id){
+            return (<button onClick={ clickHandler(review.id) }><span><i className="material-icons">delete</i></span></button>)
+        }
+        else { return (<div></div>) }
+    };
+
     return (
         <li className="business-show-review">
             <div className="review-sidebar">
@@ -16,7 +32,7 @@ const ReviewListItem = ({ business, review, author }) => {
                 <ul className="review-sidebar-links">
                     <li><Link to={'/'}><div className="review-link"><i className="material-icons">share</i><span className="review-first-link">Share review</span></div></Link></li>
                     <li><Link to={'/'}><div className="review-link"><i className="material-icons">code</i><span>Embed review</span></div></Link></li>
-                    <li><Link to={`/biz/${business.id}/edit/${review.id}`}><div className="review-link"><i className="material-icons">create</i><span>Edit review</span></div></Link></li>
+                    { editLink() }
                 </ul>
             </div>
 
@@ -30,6 +46,12 @@ const ReviewListItem = ({ business, review, author }) => {
                     </span>
                 </div>
                 <p className="review-body">{ body }</p>
+
+                <div className="review-item-footer">
+                    <div className="review-item-footer-arrange">
+                        { deleteBtn() }
+                    </div>
+                </div>
             </div>
         </li>
     )

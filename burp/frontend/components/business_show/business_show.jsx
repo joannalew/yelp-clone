@@ -9,13 +9,21 @@ class BusinessShow extends React.Component {
     }
 
     render() {
+        const starClass = Math.floor(this.props.business.average_rating * 2);
         const reviews = this.props.reviews.map(review => {
             return (
                 <ReviewListItemContainer key={review.id} review={review} business={this.props.business}/>
             )
         });
 
-        const starClass = Math.floor(this.props.business.average_rating * 2);
+        let buttonTitle = "Write a Review";
+        let buttonLink = `/biz/${this.props.businessId}/review`;
+        for(let i = 0; i < this.props.reviews.length; i++){
+            if (this.props.currentUser && this.props.reviews[i].user_id === this.props.currentUser.id) { 
+                buttonTitle = "Edit My Review"; 
+                buttonLink = `/biz/${this.props.businessId}/edit/${this.props.reviews[i].id}`;
+            };
+        }
 
         return (
             <div className="business-show-page">
@@ -37,10 +45,10 @@ class BusinessShow extends React.Component {
                         </div>
                         
                         <div className="business-show-header-buttons">
-                            <Link to={`/biz/${this.props.businessId}/review`}>
+                            <Link to={ buttonLink }>
                                 <button className='business-show-add-review'>
                                     <i className="material-icons">star_rate</i>
-                                    <span>Write a Review</span>
+                                    <span>{ buttonTitle }</span>
                                 </button>
                             </Link>
                             <span className="business-show-small-btns">
