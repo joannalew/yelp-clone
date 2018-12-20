@@ -1,7 +1,7 @@
 @businesses.each do |business|
     json.businesses do
         json.set! business.id do
-            json.partial! 'business', business: business
+            json.partial! '/api/businesses/business', business: business
             json.reviewIds business.reviews.pluck(:id)
         end
     end

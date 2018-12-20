@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import GreetingContainer from './greeting_container';
-import SearchBar from '../search/search_bar';
+import SearchBarContainer from '../search/search_bar_container';
 
 const Home = () => (
     <div>
@@ -28,7 +28,7 @@ const Home = () => (
                             </h1>
                         </div>
 
-                        <SearchBar placeholder="burgers, barbers, spas, handymen..."/>
+                        <SearchBarContainer placeholder="burgers, barbers, spas, handymen..."/>
                     </div>
                 </div>
             </div>

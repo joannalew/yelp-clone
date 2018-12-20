@@ -1,4 +1,5 @@
 import * as BusinessApiUtil from '../util/business_api_util';
+import * as SearchApiUtil from '../util/search_api_util';
 
 export const RECEIVE_BUSINESSES = "RECEIVE_BUSINESSES";
 export const RECEIVE_BUSINESS = "RECEIVE_BUSINESS";
@@ -30,4 +31,9 @@ export const fetchBusiness = id => dispatch => (
 export const createBusiness = business => dispatch => (
     BusinessApiUtil.fetchBusiness(business)
         .then(business => dispatch(receiveBusiness(business)))
+);
+
+export const searchBusinesses = query => dispatch => (
+    SearchApiUtil.searchBusinesses(query)
+        .then(payload => dispatch(receiveBusinesses(payload)))
 );

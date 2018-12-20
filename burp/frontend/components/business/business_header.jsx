@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SearchBar from '../search/search_bar';
+import SearchBarContainer from '../search/search_bar_container';
 import GreetingContainer from '../greeting/greeting_container';
 
 
@@ -13,7 +13,7 @@ const BusinessHeader = () => (
                 </div>
 
                 <div className="business-header-search">
-                    <SearchBar placeholder="tacos, cheap dinner, Max's" />
+                    <SearchBarContainer placeholder="tacos, cheap dinner, Max's" />
                 </div>
 
                 <div className="greeting-buttons">

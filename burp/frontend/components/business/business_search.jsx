@@ -3,11 +3,7 @@ import BusinessIndexItemContainer from './business_index_item_container';
 import BusinessHeader from './business_header';
 
 
-class BusinessIndex extends React.Component {
-    componentDidMount() {
-        this.props.fetchBusinesses();
-    }
-
+class BusinessSearch extends React.Component {
     render() {
         let businesses = this.props.businesses.map((business, idx) => {
             return (
@@ -58,5 +54,5 @@ class BusinessIndex extends React.Component {
     }
 }
 
-export default BusinessIndex;
+export default BusinessSearch;
 

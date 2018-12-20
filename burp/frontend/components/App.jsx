@@ -8,6 +8,7 @@ import BusinessIndexContainer from './business/business_index_container';
 import BusinessShowContainer from './business_show/business_show_container';
 import CreateReviewFormContainer from './review_form/create_review_form_container';
 import EditReviewFormContainer from './review_form/edit_review_form_container';
+import BusinessSearchContainer from './business/business_search_container';
 
 
 const App = () => (
@@ -19,6 +20,7 @@ const App = () => (
         <Route exact path="/biz/:businessId" component={BusinessShowContainer} />
         <Route exact path="/biz/:businessId/review" component={CreateReviewFormContainer} />
         <Route exact path="/biz/:businessId/edit/:reviewId" component={EditReviewFormContainer} />
+        <Route path="/businesses/search" component={BusinessSearchContainer} />
     </div>
 );
 

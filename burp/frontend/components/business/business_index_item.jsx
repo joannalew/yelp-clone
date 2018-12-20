@@ -10,7 +10,7 @@ const BusinessIndexItem = ({ business, reviews, idx }) => {
     <li className="business-index-item">
         <div className="business-item-content-main">
             <div className="business-item-content-arrange">
-                <Link to="/businesses">
+                <Link to={`/biz/${business.id}`}>
                     <img className="business-image" src={ business.photo }></img>
                 </Link>
                 <div>

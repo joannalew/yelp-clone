@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store.js';
 import Root from './components/root';
-import { createReview, updateReview, deleteReview } from './actions/review_actions';
-import { fetchAllBusinesses } from './util/business_api_util';
+import { searchBusinesses } from './util/search_api_util';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,10 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;  // testing
   window.dispatch = store.dispatch;
 
-  window.createReview = createReview;
-  window.updateReview = updateReview;
-  window.deleteReview = deleteReview;
-  window.fetchAllBusinesses = fetchAllBusinesses;
+  window.searchBusinesses = searchBusinesses;
 
   ReactDOM.render(<Root store={store} />, root);
 });
