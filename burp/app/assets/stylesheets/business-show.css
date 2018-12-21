@@ -127,6 +127,11 @@
     padding: 18px 0 36px 0;
 }
 
+.business-show-border-cutoff {
+    position: relative;
+    overflow: hidden;
+}
+
 .business-show-mapbox {
     flex: 1;
     padding: 5px;
@@ -137,9 +142,8 @@
 .business-show-showcase {
     flex: 2;
     vertical-align: middle;
-    background-color: yellow;
     position: relative;
-    width: 660px;
+    width: 690px;
     height: 220px;
 }
 

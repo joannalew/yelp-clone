@@ -9,3 +9,13 @@ business2.photo.attach(io: File.open('./app/assets/images/business/business2.jpg
 business3.photo.attach(io: File.open('./app/assets/images/business/business3.jpg'), filename: 'business3.jpg')
 business4.photo.attach(io: File.open('./app/assets/images/business/business4.jpg'), filename: 'business4.jpg')
 business5.photo.attach(io: File.open('./app/assets/images/business/business5.jpg'), filename: 'business5.jpg')
+
+business1.pics.attach(io: File.open('./app/assets/images/business/business1.jpg'), filename: 'business1.jpg')
+business1.pics.attach(io: File.open('./app/assets/images/business/business10.jpg'), filename: 'business1.jpg')
+business1.pics.attach(io: File.open('./app/assets/images/business/business11.jpg'), filename: 'business1.jpg')
+business1.pics.attach(io: File.open('./app/assets/images/business/business12.jpg'), filename: 'business1.jpg')
+business1.pics.attach(io: File.open('./app/assets/images/business/business13.jpg'), filename: 'business1.jpg')
+business1.pics.attach(io: File.open('./app/assets/images/business/business14.jpg'), filename: 'business1.jpg')
+business1.pics.attach(io: File.open('./app/assets/images/business/business15.jpg'), filename: 'business1.jpg')
+business1.pics.attach(io: File.open('./app/assets/images/business/business16.jpg'), filename: 'business1.jpg')
+business1.pics.attach(io: File.open('./app/assets/images/business/business17.jpg'), filename: 'business1.jpg')

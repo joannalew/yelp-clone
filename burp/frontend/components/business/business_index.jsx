@@ -1,6 +1,7 @@
 import React from 'react';
 import BusinessIndexItemContainer from './business_index_item_container';
 import BusinessHeader from './business_header';
+import BusinessMap from '../map/business_map'
 
 
 class BusinessIndex extends React.Component {
@@ -46,7 +47,7 @@ class BusinessIndex extends React.Component {
                                         <button className="map-search-btn">Redo Search In Map</button>
                                     </div>
                                     <div className="business-map-google">
-
+                                        <BusinessMap businesses={ this.props.businesses } />
                                     </div>
                                 </div>
                             </div>

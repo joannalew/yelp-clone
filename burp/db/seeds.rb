@@ -48,6 +48,15 @@ business3.photo.attach(io: File.open('./app/assets/images/business/business3.jpg
 business4.photo.attach(io: File.open('./app/assets/images/business/business4.jpg'), filename: 'business4.jpg')
 business5.photo.attach(io: File.open('./app/assets/images/business/business5.jpg'), filename: 'business5.jpg')
 
+business1.pics.attach(io: File.open('./app/assets/images/business/business1.jpg'), filename: 'business1-1.jpg')
+business1.pics.attach(io: File.open('./app/assets/images/business/business10.jpg'), filename: 'business10.jpg')
+business1.pics.attach(io: File.open('./app/assets/images/business/business11.jpg'), filename: 'business11.jpg')
+business1.pics.attach(io: File.open('./app/assets/images/business/business12.jpg'), filename: 'business12.jpg')
+business1.pics.attach(io: File.open('./app/assets/images/business/business13.jpg'), filename: 'business13.jpg')
+business1.pics.attach(io: File.open('./app/assets/images/business/business14.jpg'), filename: 'business14.jpg')
+business1.pics.attach(io: File.open('./app/assets/images/business/business15.jpg'), filename: 'business15.jpg')
+business1.pics.attach(io: File.open('./app/assets/images/business/business16.jpg'), filename: 'business16.jpg')
+business1.pics.attach(io: File.open('./app/assets/images/business/business17.jpg'), filename: 'business17.jpg')
 
 Review.create(business_id: business1.id, user_id: user1.id, rating: 5, body: "Had the best dinner here!! It is right off the pier with great views of the city, the bay, and most importantly, the Golden Gate Bridge! Make sure to get reservations and ask for a seat by the window to get a great sunset view at dinner.")
 Review.create(business_id: business1.id, user_id: user2.id, rating: 5, body: "I ate here yesterday as my first meal ever in San Francisco and I was definitely not disappointed! I came at happy hour time (around 4pm) and so I got to take part of some happy hour specials while sitting at the bar. I came here for the sourdough bread bowl of clam chowder, and probably would've been fine with just that - but I couldn't pass up the fried lemon calamari on the happy hour menu for $7, and was very happy that I got that as well! (And some wine, of course).")

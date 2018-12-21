@@ -13,4 +13,5 @@ class Business < ApplicationRecord
     def average_rating
         reviews.average(:rating)
     end
+
 end
