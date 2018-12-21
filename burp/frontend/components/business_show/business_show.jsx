@@ -89,6 +89,10 @@ class BusinessShow extends React.Component {
 
     render() {
         const starClass = Math.floor(this.props.business.average_rating * 2);
+        
+        let website = "/";
+        if ( this.props.business.website ) { website = this.props.business.website };
+
         const reviews = this.props.reviews.map(review => {
             return (
                 <ReviewListItemContainer key={review.id} review={review} business={this.props.business}/>
@@ -157,8 +161,32 @@ class BusinessShow extends React.Component {
                                     { this.getMapComponent() }
                                 </div>
                                 <div className="business-mapbox-text">
-                                    <ul>
-                                        
+                                    <ul className="business-mapbox-items">
+                                        <li className="business-mapbox-item">
+                                            <span><i class="material-icons">place</i></span>
+                                            <span className="business-mapbox-item-info">
+                                                <div className="bold">{ this.props.business.address }</div>
+                                                <div className="bold">{ this.props.business.city }, {this.props.business.state} {this.props.business.zip_code }</div>
+                                            </span>
+                                        </li>
+                                        <li className="business-mapbox-item">
+                                            <span><i class="material-icons">directions</i></span>
+                                            <span className="business-mapbox-item-info">
+                                                <div>Get directions</div>
+                                            </span>
+                                        </li>
+                                        <li className="business-mapbox-item">
+                                            <span><i class="material-icons">local_phone</i></span>
+                                            <span className="business-mapbox-item-info">
+                                                <div>{ this.props.business.phone }</div>
+                                            </span>
+                                        </li>
+                                        <li className="business-mapbox-item">
+                                            <span><i class="material-icons">open_in_browser</i></span>
+                                            <span className="business-mapbox-item-info">
+                                                <div><Link to={ website }>{ this.props.business.website }</Link></div>
+                                            </span>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>

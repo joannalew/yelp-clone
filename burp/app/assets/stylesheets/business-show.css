@@ -230,3 +230,21 @@
 .bold { 
     font-weight: 700;
 }
+
+
+.business-mapbox-items {
+    margin: 5px;
+    font-size: 14px;
+}
+
+.business-mapbox-item {
+    display: flex;
+    margin-bottom: 3px;
+    color: #333;
+}
+
+.business-mapbox-item i {
+    font-size: 18px;
+    color: #666;
+    margin-right: 6px;
+}
