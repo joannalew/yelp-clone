@@ -1,0 +1,117 @@
+.home-page-businesses-container {
+    min-width: 1020px;
+    padding-top: 36px; 
+}
+
+.home-page-businesses-arrange {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.home-page-businesses-title {
+    text-align: center;
+}
+
+.home-page-businesses-title h2 {
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-size: 21px;
+    color: #d32323;
+}
+
+.hp-business-location-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.hp-business-locations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.hp-business-location {
+    font-size: 14px;
+    padding: 8px 12px;
+    color: #666;
+    border-bottom: 3px solid transparent;
+}
+
+.hp-business-location:hover {
+    border-bottom: 3px solid #d32323;
+}
+
+.hp-business-list-container {
+    padding-top: 42px;
+    padding-bottom: 90px;
+}
+
+.hp-business-list-container h3 {
+    text-align: center;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #d32323;
+}
+
+.hp-business-list-arrange {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hp-business-card {
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    margin: 0 15px;
+}
+
+.card-photo {
+    height: 180px;
+    width: 298px;
+    overflow: hidden;
+    border-bottom: 1px solid #e6e6e6;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.card-photo img {
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 12px;
+}
+
+.card-content-name {
+    color: #0073bb;
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.card-content-name:hover {
+    text-decoration: underline;
+}
+
+.card-content-category {
+    font-size: 14px;
+    color: #333;
+    margin: 6px 0;
+}
+
+
+.link-to-businesses {
+    margin-top: 12px;
+    text-align: center;
+    color: #0073bb;
+    font-size: 14px;
+}
+
+.link-to-businesses a:hover {
+    text-decoration: underline;
+}

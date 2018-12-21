@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import GreetingContainer from './greeting_container';
 import SearchBarContainer from '../search/search_bar_container';
+import HomePageBusinesses from './home_page_businesses';
 
 const Home = () => {
     const headerRand = Math.floor(Math.random() * 7);
@@ -36,6 +37,7 @@ const Home = () => {
                     </div>
                 </div>
             </header>
+            <HomePageBusinesses />
         </div>
     )
 };
