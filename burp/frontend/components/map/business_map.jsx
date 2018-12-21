@@ -8,14 +8,14 @@ class BusinessMap extends React.Component {
 
     componentDidMount() {
         const mapOptions = {
-            center: {lat: 37.798500, lng: -122.417303},
+            center: {lat: this.props.lat, lng: this.props.lng},
             zoom: 13,
             mapTypeControlOptions: {
                 mapTypeIds: []
             },
             fullscreenControl: false,
             streetViewControl: false,
-            zoomControl: true,
+            zoomControl: this.props.zoom,
             zoomControlOptions: {
                 position: google.maps.ControlPosition.TOP_LEFT
             }
@@ -23,21 +23,11 @@ class BusinessMap extends React.Component {
 
         this.map = new google.maps.Map(this.mapNode, mapOptions);
         this.MarkerManager = new MarkerManager(this.map);
-        if (this.props.business) {
-            console.log('single business');
-        }
-        else {
-            this.MarkerManager.updateMarkers(this.props.businesses);
-        }
+        this.MarkerManager.updateMarkers(this.props.businesses);
     }
 
     componentDidUpdate() {
-        if (this.props.business) {
-            console.log('single business');
-        }
-        else {
-            this.MarkerManager.updateMarkers(this.props.businesses);
-        }
+        this.MarkerManager.updateMarkers(this.props.businesses);
     }
 
     render() {

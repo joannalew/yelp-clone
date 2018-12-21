@@ -7,6 +7,7 @@ class MarkerManager {
 
     updateMarkers(businesses) {
         const businessesObj = {};
+
         businesses.forEach(business => businessesObj[business.id] = business);
         businesses.filter(business => !this.markers[business.id])
                   .forEach(newBusiness => {

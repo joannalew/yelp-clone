@@ -1,7 +1,7 @@
 import React from 'react';
 import BusinessIndexItemContainer from './business_index_item_container';
 import BusinessHeader from './business_header';
-
+import BusinessMap from '../map/business_map';
 
 class BusinessSearch extends React.Component {
     render() {
@@ -42,7 +42,7 @@ class BusinessSearch extends React.Component {
                                         <button className="map-search-btn">Redo Search In Map</button>
                                     </div>
                                     <div className="business-map-google">
-
+                                        <BusinessMap businesses={ this.props.businesses } zoom={ true } lat={ 37.798500 } lng={ -122.417303 } />
                                     </div>
                                 </div>
                             </div>

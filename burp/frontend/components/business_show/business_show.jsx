@@ -3,10 +3,14 @@ import { Link } from 'react-router-dom';
 import BusinessHeader from '../business/business_header';
 import ReviewListItemContainer from './review_list_item_container';
 import SliderContainer from './slider_container';
+import BusinessMap from '../map/business_map';
+
 
 class BusinessShow extends React.Component {
     componentDidMount() {
         this.props.fetchBusiness( this.props.businessId );
+        this.map = (<BusinessMap businesses={ [this.props.business] } zoom={ false } 
+                    lng={ parseFloat(this.props.business.longitude) } lat={ parseFloat(this.props.business.latitude) }/>);
     }
 
     starListClass(index) {
@@ -69,9 +73,18 @@ class BusinessShow extends React.Component {
                 </li>
             )
         }
-        else{
-            return (<div></div>)
+        return (<div></div>)
+    }
+
+    getMapComponent() {
+        if (this.props.business.id) { 
+            return (
+                <BusinessMap businesses={ [this.props.business] } zoom={ false } 
+                    lng={ parseFloat(this.props.business.longitude) } 
+                    lat={ parseFloat(this.props.business.latitude) } />
+            )
         }
+        return (<div></div>)
     }
 
     render() {
@@ -97,7 +110,6 @@ class BusinessShow extends React.Component {
 
         return (
             <div className="business-show-page">
-                
                 <div className="main-header">
                     <BusinessHeader />
                     <div className="business-show-border-cutoff">
@@ -142,8 +154,12 @@ class BusinessShow extends React.Component {
                         <div className="business-show-subheader">
                             <div className="business-show-mapbox">
                                 <div className="business-mapbox-map">
+                                    { this.getMapComponent() }
                                 </div>
                                 <div className="business-mapbox-text">
+                                    <ul>
+                                        
+                                    </ul>
                                 </div>
                             </div>
 
