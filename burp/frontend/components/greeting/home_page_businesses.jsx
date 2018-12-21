@@ -23,13 +23,13 @@ const HomePageBusinesses = () => {
                     <h3>Popular Businesses</h3>
                     <div className="hp-business-list-arrange">
                         <div className="hp-business-card">
-                            <Link to={'/biz/44'}>
+                            <Link to={'/biz/54'}>
                                 <div className="card-photo">
                                     <img src="https://i.imgur.com/KWfOeZG.jpg"></img>
                                 </div>
                             </Link>
                             <div className="card-content">
-                                <Link to={'/biz/44'}>
+                                <Link to={'/biz/54'}>
                                     <div className="card-content-name">Fog Harbor Fish House</div>
                                 </Link>
                                 <div className="card-content-category">Seafood, Bars</div>
@@ -37,13 +37,13 @@ const HomePageBusinesses = () => {
                             </div>
                         </div>
                         <div className="hp-business-card">
-                            <Link to={'/biz/45'}>
+                            <Link to={'/biz/55'}>
                                 <div className="card-photo">
                                     <img src="https://i.imgur.com/OGdpiCo.jpg"></img>
                                 </div>
                             </Link>
                             <div className="card-content">
-                                <Link to={'/biz/45'}>
+                                <Link to={'/biz/55'}>
                                     <div className="card-content-name">Marufuku Ramen</div>
                                 </Link>
                                 <div className="card-content-category">Japanese, Ramen</div>
@@ -51,13 +51,13 @@ const HomePageBusinesses = () => {
                             </div>
                         </div>
                         <div className="hp-business-card">
-                            <Link to={'/biz/46'}>
+                            <Link to={'/biz/56'}>
                                 <div className="card-photo">
                                     <img src="https://i.imgur.com/8RSWlLE.jpg"></img>
                                 </div>
                             </Link>
                             <div className="card-content">
-                                <Link to={'/biz/46'}>
+                                <Link to={'/biz/56'}>
                                     <div className="card-content-name">The House</div>
                                 </Link>
                                 <div className="card-content-category">Asian Fusion</div>
