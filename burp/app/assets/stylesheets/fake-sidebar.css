@@ -1,0 +1,52 @@
+.sidebar-sub-title {
+    font-weight: 700;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #d32323;
+}
+
+.sidebar-hours {
+    margin-bottom: 24px;
+}
+
+.sidebar-list {
+    font-size: 14px;
+    color: #333;
+}
+
+.sidebar-hours-item {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-hours-day {
+    min-width: 36px;
+    padding-right: 15px;
+    font-weight: 700;
+}
+
+.sidebar-hours-times {
+    font-size: 14px;
+    padding-right: 10px;
+}
+
+.sidebar-hours-extra {
+    color: #41a700;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+
+.sidebar-info-item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 6px;
+}
+
+.sidebar-info-desc {
+    margin-right: 0.25em;
+}
+
+.sidebar-info-info {
+    font-weight: 700;
+}

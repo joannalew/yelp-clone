@@ -239,7 +239,7 @@
 
 .business-mapbox-item {
     display: flex;
-    margin-bottom: 3px;
+    margin-bottom: 1px;
     color: #333;
 }
 
@@ -247,4 +247,12 @@
     font-size: 18px;
     color: #666;
     margin-right: 6px;
+}
+
+.business-mapbox-item a {
+    color: #0073bb;
+}
+
+.business-mapbox-item a:hover {
+    color: #0073bb;
 }

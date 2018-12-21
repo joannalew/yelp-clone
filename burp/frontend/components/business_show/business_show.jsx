@@ -4,6 +4,7 @@ import BusinessHeader from '../business/business_header';
 import ReviewListItemContainer from './review_list_item_container';
 import SliderContainer from './slider_container';
 import BusinessMap from '../map/business_map';
+import FakeSidebar from './fake_sidebar';
 
 
 class BusinessShow extends React.Component {
@@ -163,28 +164,28 @@ class BusinessShow extends React.Component {
                                 <div className="business-mapbox-text">
                                     <ul className="business-mapbox-items">
                                         <li className="business-mapbox-item">
-                                            <span><i class="material-icons">place</i></span>
+                                            <span><i className="material-icons">place</i></span>
                                             <span className="business-mapbox-item-info">
                                                 <div className="bold">{ this.props.business.address }</div>
                                                 <div className="bold">{ this.props.business.city }, {this.props.business.state} {this.props.business.zip_code }</div>
                                             </span>
                                         </li>
                                         <li className="business-mapbox-item">
-                                            <span><i class="material-icons">directions</i></span>
+                                            <span><i className="material-icons">directions</i></span>
                                             <span className="business-mapbox-item-info">
-                                                <div>Get directions</div>
+                                                <div><a href={"https://www.google.com/maps/@" + this.props.business.latitude + "," + this.props.business.longitude}>Get directions</a></div>
                                             </span>
                                         </li>
                                         <li className="business-mapbox-item">
-                                            <span><i class="material-icons">local_phone</i></span>
+                                            <span><i className="material-icons">local_phone</i></span>
                                             <span className="business-mapbox-item-info">
                                                 <div>{ this.props.business.phone }</div>
                                             </span>
                                         </li>
                                         <li className="business-mapbox-item">
-                                            <span><i class="material-icons">open_in_browser</i></span>
+                                            <span><i className="material-icons">open_in_browser</i></span>
                                             <span className="business-mapbox-item-info">
-                                                <div><Link to={ website }>{ this.props.business.website }</Link></div>
+                                                <div><a href={"https://" + this.props.business.website}>{ this.props.business.website }</a></div>
                                             </span>
                                         </li>
                                     </ul>
@@ -215,7 +216,7 @@ class BusinessShow extends React.Component {
                             </div>
 
                             <div className="business-show-main-sidebar">
-                            sdfsd
+                                <FakeSidebar />
                             </div>
                         </div>
                     </div>

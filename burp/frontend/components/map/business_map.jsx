@@ -18,7 +18,8 @@ class BusinessMap extends React.Component {
             zoomControl: this.props.zoom,
             zoomControlOptions: {
                 position: google.maps.ControlPosition.TOP_LEFT
-            }
+            },
+            gestureHandling: 'none'
         }
 
         this.map = new google.maps.Map(this.mapNode, mapOptions);
