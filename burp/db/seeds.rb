@@ -9,6 +9,8 @@
 User.destroy_all
 Business.destroy_all
 Review.destroy_all
+Category.destroy_all
+BusinessCategory.destroy_all
 
 
 demo = User.create(first_name: 'Demo', last_name: 'User', email: 'noemail@email.com', password: 'password', zip_code: '94018')
@@ -75,10 +77,6 @@ business7 = Business.create(business_name: "Trattoria Contadina", address: "1800
 business8 = Business.create(business_name: "Crispy Tacos", address: "1500 Broadway", city: "San Francisco", state: "CA", zip_code: "94109", latitude: 37.796050, longitude: -122.422110, phone: "(415) 409-8226", website: "nickscrispytacos.com", price: '$')
 business9 = Business.create(business_name: "Scoma Restaurant", address: "1965 Al Scoma Way", city: "San Francisco", state: "CA", zip_code: "94133", latitude: 37.809030, longitude: -122.418020, phone: "(415) 771-4383", website: "scomas.com", price: '$$$')
 business10 = Business.create(business_name: "The Boardroom", address: "1600 Powell St", city: "San Francisco", state: "CA", zip_code: "94133", latitude: 37.799470, longitude: -122.410430, phone: "(415) 982-8898", website: "boardroomsf.com", price: '$')
-
-# business11 = Business.create(business_name: "Del Popolo", address: "855 Bush St", city: "San Francisco", state: "CA", zip_code: "94108", latitude: 37.789551, longitude: -122.411331, phone: "(415) 589-7940", website: "delpopolosf.com", price: '$$')
-# business12 = Business.create(business_name: "Uncle Vito's", address: "700 Bush St", city: "San Francisco", state: "CA", zip_code: "94108", latitude: 37.7903112, longitude: -122.4089665, phone: "(415) 391-5008", website: "unclevitos.com", price: '$$')
-
 
 business1.photo.attach(io: File.open('./app/assets/images/business/1-fog/fog1.jpg'), filename: 'fog1-1.jpg')
 business1.pics.attach(io: File.open('./app/assets/images/business/1-fog/fog1.jpg'), filename: 'fog1.jpg')
@@ -338,11 +336,34 @@ Review.create(business_id: business10.id, user_id: user16.id, rating: 3, body: "
 Review.create(business_id: business10.id, user_id: user17.id, rating: 5, body: "Wow. This spot came out of nowhere and really surprised me. It doesn't look like much. Looks just like another random sports bar. But when I got my bill for drinks, they were charging $2 pints and shots during happy hour. I was like this can't be right but it was.")
 
 
-# Review.create(business_id: business4.id, user_id: user3.id, rating: 5, body: "Easily one of the best pizza spots in SF. The pizza crust is chewy, slightly sourdoughy, soft, and the perfect amount of bubble and char. We always get the Bianca which is a white pie with kale, garlic, and mozzarella and we do an add-on for sausage.")
-# Review.create(business_id: business4.id, user_id: user4.id, rating: 5, body: "My favorite pizza! I'm not actually a lover of pizza because I don't like bread. I enjoy pizza once in a while or when I drink, but I love other foods more. But wow, the pizza here is amazing where I'd crave it sober. The dough is so soft but in the best way... most crusts I've had on pizzas are usually dry or hard or empty/airy inside but the crust on these is soft and yummy.")
-# Review.create(business_id: business4.id, user_id: user5.id, rating: 4, body: "I adored the pizza. A nice thin bubbly crust. And just the right amount of toppings. My favorite pizza is a pepperoni and mushroom, so this hit the spot. Sitting at the counter was a bit uncomfortable, so I recommend trying to get a table if possible. The heat from the pizza oven made it a little too toasty.")
-# Review.create(business_id: business4.id, user_id: user6.id, rating: 5, body: "This has to be the best pizza in SF. The dough is light , springy and just the right texture for thin crust pizza. The toppings are sophisticated and special. It's not just a marinara pizza: it's toasted garlic and fresh oregano. I had the squash pizza with smoked cheese chili's honey and thyme. Great combination of heat and hearty and herb.")
-# Review.create(business_id: business4.id, user_id: user8.id, rating: 5, body: "Had dinner and a private event here (covered garden patio in the back) and I was blown away both times. The staff for our private event went above and beyond, catered to different dietary needs seamlessly, were kind, thoughtful and incredibly attentive. We had a wonderful time and the food was just as amazing as the service. Delicious pizzas and small plates. Felt so lucky to find this gem. Thank you!!!")
-# Review.create(business_id: business4.id, user_id: user9.id, rating: 3, body: "Very casual ambiance, good service, a bit too expensive. The seating arrangement was uncomfortable. I enjoyed my pizza but it was not one of the best of SF. Burrata appetizer was good but nothing to rave about. Desserts variety is limited.")
-# Review.create(business_id: business4.id, user_id: user10.id, rating: 5, body: "The pizza is Neapolitan style, cooked perfectly (with deliciously chewy crust), and high-quality ingredients. The pizza is also prepared/cooked quickly (less than 5-10 min). You can make your pizza vegan by omitting cheese...the pizza is so good that won't miss it.")
-  
+cat1 = Category.create(name: "Breakfast")
+cat2 = Category.create(name: "Lunch")
+cat3 = Category.create(name: "Dinner")
+cat4 = Category.create(name: "Seafood")
+cat5 = Category.create(name: "Asian")
+cat6 = Category.create(name: "Asian Fusion")
+cat7 = Category.create(name: "Mexican")
+cat8 = Category.create(name: "Italian")
+cat9 = Category.create(name: "American")
+
+
+BusinessCategory.create(business_id: business1.id, category_id: cat3.id)
+BusinessCategory.create(business_id: business1.id, category_id: cat4.id)
+BusinessCategory.create(business_id: business2.id, category_id: cat3.id)
+BusinessCategory.create(business_id: business2.id, category_id: cat5.id)
+BusinessCategory.create(business_id: business3.id, category_id: cat3.id)
+BusinessCategory.create(business_id: business3.id, category_id: cat6.id)
+BusinessCategory.create(business_id: business4.id, category_id: cat3.id)
+BusinessCategory.create(business_id: business4.id, category_id: cat4.id)
+BusinessCategory.create(business_id: business5.id, category_id: cat3.id)
+BusinessCategory.create(business_id: business5.id, category_id: cat9.id)
+BusinessCategory.create(business_id: business6.id, category_id: cat2.id)
+BusinessCategory.create(business_id: business6.id, category_id: cat7.id)
+BusinessCategory.create(business_id: business7.id, category_id: cat3.id)
+BusinessCategory.create(business_id: business7.id, category_id: cat8.id)
+BusinessCategory.create(business_id: business8.id, category_id: cat2.id)
+BusinessCategory.create(business_id: business8.id, category_id: cat7.id)
+BusinessCategory.create(business_id: business9.id, category_id: cat2.id)
+BusinessCategory.create(business_id: business9.id, category_id: cat4.id)
+BusinessCategory.create(business_id: business10.id, category_id: cat2.id)
+BusinessCategory.create(business_id: business10.id, category_id: cat9.id)

@@ -90,7 +90,7 @@ class BusinessShow extends React.Component {
 
     render() {
         const starClass = Math.floor(this.props.business.average_rating * 2);
-        
+    
         let website = "/";
         if ( this.props.business.website ) { website = this.props.business.website };
 
@@ -113,6 +113,13 @@ class BusinessShow extends React.Component {
             };
         }
 
+        let category1 = "";
+        let category2 = "";
+        if (this.props.categories.length > 0) {
+            category1 = this.props.categories[0].name;
+            category2 = this.props.categories[1].name;
+        }
+
         return (
             <div className="business-show-page">
                 <div className="main-header">
@@ -127,8 +134,8 @@ class BusinessShow extends React.Component {
                                 </p>
                                 <p className="business-show-pricecat">
                                     <span className="business-item-price">{ this.props.business.price }</span>
-                                    <Link to={'/businesses'}>Category 1</Link>, &nbsp;
-                                    <Link to={'/businesses'}>Category 2</Link>
+                                    <Link to={'/businesses'}>{ category1 }</Link>,&nbsp;
+                                    <Link to={'/businesses'}>{ category2 }</Link>
                                 </p>
                             </div>
                         

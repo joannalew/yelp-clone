@@ -4,18 +4,20 @@ import * as SearchApiUtil from '../util/search_api_util';
 export const RECEIVE_BUSINESSES = "RECEIVE_BUSINESSES";
 export const RECEIVE_BUSINESS = "RECEIVE_BUSINESS";
 
-export const receiveBusinesses = ({ businesses, reviews, authors }) => ({
+export const receiveBusinesses = ({ businesses, reviews, authors, categories }) => ({
     type: RECEIVE_BUSINESSES,
     businesses, 
     reviews,
-    authors
+    authors,
+    categories
 });
 
-export const receiveBusiness = ({ business, reviews, authors }) => ({
+export const receiveBusiness = ({ business, reviews, authors, categories }) => ({
     type: RECEIVE_BUSINESS,
     business,
     reviews,
-    authors
+    authors,
+    categories
 });
 
 export const fetchBusinesses = () => dispatch => (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const BusinessIndexItem = ({ business, reviews, idx }) => {
+const BusinessIndexItem = ({ business, reviews, categories, idx }) => {
     let review = "";
     if (reviews.length > 0) { review = '"' + reviews[0].body + '"';}
     const starRating = Math.floor(business.average_rating * 2);
@@ -23,8 +23,8 @@ const BusinessIndexItem = ({ business, reviews, idx }) => {
                             </p>
                             <p className="business-item-categories">
                                 <span className="business-item-price">{ business.price }</span> 
-                                <Link to={'/businesses'}>Category 1</Link>, &nbsp;
-                                <Link to={'/businesses'}>Category 2</Link>
+                                <Link to={'/businesses'}>{ categories[0].name }</Link>,&nbsp;
+                                <Link to={'/businesses'}>{ categories[1].name }</Link>
                             </p>
                         </div>
 
