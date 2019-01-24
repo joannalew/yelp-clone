@@ -3,6 +3,15 @@
         json.set! business.id do
             json.partial! '/api/businesses/business', business: business
             json.reviewIds business.reviews.pluck(:id)
+            json.categoryIds business.categories.pluck(:id)
+        end
+    end
+
+    business.categories.each do |category|
+        json.categories do
+            json.set! category.id do
+                json.partial! 'api/categories/category', category: category
+            end
         end
     end
 
