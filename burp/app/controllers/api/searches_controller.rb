@@ -14,5 +14,9 @@ class Api::SearchesController < ApplicationController
         render '/api/businesses/index'
     end
 
-
+    def category_search
+        query = params[:query][:category]
+        @businesses = Category.find_by(name: query).businesses
+        render '/api/businesses/index'
+    end
 end

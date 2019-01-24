@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy]
     get 'businesses/search', to: 'searches#business_search'
+    get 'categories/search', to: 'searches#category_search'
     resources :businesses, only: [:create, :index, :show]
     resources :reviews, only: [:create, :update, :destroy]
     resources :categories, only: [:create]
