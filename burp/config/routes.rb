@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     get 'businesses/search', to: 'searches#business_search'
     resources :businesses, only: [:create, :index, :show]
     resources :reviews, only: [:create, :update, :destroy]
+    resources :categories, only: [:create]
   end
 
   root "static_pages#root"

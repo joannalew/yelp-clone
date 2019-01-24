@@ -10,6 +10,7 @@ class Api::SearchesController < ApplicationController
         locationStr = "LOWER(city) = '#{location.downcase}'"
 
         @businesses = Business.where('(' + queryStr + ') AND (' + locationStr + ')')
+        @businesses = Business.all if @businesses.empty?
         render '/api/businesses/index'
     end
 
