@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { fetchBusiness } from '../../actions/business_actions';
+import { fetchBusiness, searchCategories } from '../../actions/business_actions';
 import { selectReviewsForBusiness, selectBusiness, selectCategoriesForBusiness } from '../../reducers/selectors';
 import BusinessShow from './business_show';
 
@@ -18,7 +18,8 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    fetchBusiness: id => dispatch(fetchBusiness(id))
+    fetchBusiness: id => dispatch(fetchBusiness(id)),
+    searchCategories: query => dispatch(searchCategories(query))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BusinessShow);

@@ -8,6 +8,11 @@ import FakeSidebar from './fake_sidebar';
 
 
 class BusinessShow extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
     componentDidMount() {
         this.props.fetchBusiness( this.props.businessId );
         this.map = (<BusinessMap businesses={ [this.props.business] } zoom={ false } 
@@ -27,6 +32,12 @@ class BusinessShow extends React.Component {
 
     mouseLeave(){
         return () => { this.starListClass(0); };
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.searchCategories({ category: e.currentTarget.value })
+            .then(() => this.props.history.push('/businesses/search'));
     }
 
     getStarsComponent(bool) {
@@ -134,8 +145,8 @@ class BusinessShow extends React.Component {
                                 </p>
                                 <p className="business-show-pricecat">
                                     <span className="business-item-price">{ this.props.business.price }</span>
-                                    <Link to={'/businesses'}>{ category1 }</Link>,&nbsp;
-                                    <Link to={'/businesses'}>{ category2 }</Link>
+                                    <button className="button-link" type="submit" value={ category1 } onClick={ this.handleSubmit }>{ category1 }</button>,&nbsp;
+                                    <button className="button-link" type="submit" value={ category2 } onClick={ this.handleSubmit }>{ category2 }</button>
                                 </p>
                             </div>
                         

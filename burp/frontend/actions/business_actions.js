@@ -39,3 +39,8 @@ export const searchBusinesses = query => dispatch => (
     SearchApiUtil.searchBusinesses(query)
         .then(payload => dispatch(receiveBusinesses(payload)))
 );
+
+export const searchCategories = query => dispatch => (
+    SearchApiUtil.searchCategories(query)
+        .then(payload => dispatch(receiveBusinesses(payload)))
+);

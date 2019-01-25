@@ -7,7 +7,7 @@ class BusinessSearch extends React.Component {
     render() {
         let businesses = this.props.businesses.map((business, idx) => {
             return (
-                <BusinessIndexItemContainer key={business.id} business={business} idx={idx + 1}/>
+                <BusinessIndexItemContainer key={business.id} history={this.props.history} business={business} idx={idx + 1}/>
             )
         });
 
