@@ -27,7 +27,6 @@ const FakeSidebar = () => {
                     <li className="sidebar-hours-item">
                         <div className="sidebar-hours-day">Fri</div>
                         <div className="sidebar-hours-times">11:00 am - 10:00 pm</div>
-                        <div className="sidebar-hours-extra">Open</div>
                     </li>
                     <li className="sidebar-hours-item">
                         <div className="sidebar-hours-day">Sat</div>
@@ -90,12 +89,68 @@ const FakeSidebar = () => {
                         <div className="sidebar-info-info">No</div>
                     </li>
                     <li className="sidebar-info-item">
-                        <div className="sidebar-info-desc">Good For</div>
-                        <div className="sidebar-info-info">Lunch, Dinner</div>
-                    </li>
-                    <li className="sidebar-info-item">
                         <div className="sidebar-info-desc">Parking</div>
                         <div className="sidebar-info-info">Garage, Validated</div>
+                    </li>
+                    <li className="sidebar-info-item">
+                        <div className="sidebar-info-desc">Bike Parking</div>
+                        <div className="sidebar-info-info">Yes</div>
+                    </li>
+                    <li className="sidebar-info-item">
+                        <div className="sidebar-info-desc">Wheelchair Accessible</div>
+                        <div className="sidebar-info-info">Yes</div>
+                    </li>
+                    <li className="sidebar-info-item">
+                        <div className="sidebar-info-desc">Good for Kids</div>
+                        <div className="sidebar-info-info">Yes</div>
+                    </li>
+                    <li className="sidebar-info-item">
+                        <div className="sidebar-info-desc">Good for Groups</div>
+                        <div className="sidebar-info-info">Yes</div>
+                    </li>
+                    <li className="sidebar-info-item">
+                        <div className="sidebar-info-desc">Attire</div>
+                        <div className="sidebar-info-info">Casual</div>
+                    </li>
+                    <li className="sidebar-info-item">
+                        <div className="sidebar-info-desc">Noise Level</div>
+                        <div className="sidebar-info-info">Average</div>
+                    </li>
+                    <li className="sidebar-info-item">
+                        <div className="sidebar-info-desc">Good for Dancing</div>
+                        <div className="sidebar-info-info">No</div>
+                    </li>
+                    <li className="sidebar-info-item">
+                        <div className="sidebar-info-desc">Coat Check</div>
+                        <div className="sidebar-info-info">No</div>
+                    </li>
+                    <li className="sidebar-info-item">
+                        <div className="sidebar-info-desc">Smoking</div>
+                        <div className="sidebar-info-info">No</div>
+                    </li>
+                    <li className="sidebar-info-item">
+                        <div className="sidebar-info-desc">Outdoor Seating</div>
+                        <div className="sidebar-info-info">Yes</div>
+                    </li>
+                    <li className="sidebar-info-item">
+                        <div className="sidebar-info-desc">Wi-Fi</div>
+                        <div className="sidebar-info-info">Yes</div>
+                    </li>
+                    <li className="sidebar-info-item">
+                        <div className="sidebar-info-desc">Has TV</div>
+                        <div className="sidebar-info-info">Yes</div>
+                    </li>
+                    <li className="sidebar-info-item">
+                        <div className="sidebar-info-desc">Waiter Service</div>
+                        <div className="sidebar-info-info">Yes</div>
+                    </li>
+                    <li className="sidebar-info-item">
+                        <div className="sidebar-info-desc">Has Pool Table</div>
+                        <div className="sidebar-info-info">No</div>
+                    </li>
+                    <li className="sidebar-info-item">
+                        <div className="sidebar-info-desc">Open to All</div>
+                        <div className="sidebar-info-info">Yes</div>
                     </li>
                 </ul>
             </div>
