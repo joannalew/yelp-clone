@@ -134,7 +134,7 @@ class BusinessShow extends React.Component {
         return (
             <div className="business-show-page">
                 <div className="main-header">
-                    <BusinessHeader />
+                    <BusinessHeader history={ this.props.history } searchCategories={ this.props.searchCategories } />
                     <div className="business-show-border-cutoff">
                         <div className="business-show-header">
                             <div className="business-show-details">

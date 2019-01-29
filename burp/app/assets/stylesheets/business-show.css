@@ -261,6 +261,7 @@
 .button-link {
     color: #0073bb;
     cursor: pointer;
+    font-size: 14px;
 }
 
 .button-link:hover {

@@ -16,7 +16,7 @@ const Home = () => {
                             <div className="nav-left">
                                 <ul className="nav-content">
                                     <Link to={'/businesses'}><li className="header-item">Write a Review</li></Link>
-                                    <Link to={'/'}><li className="header-item">Events</li></Link>
+                                    <Link to={'/'}><li className="header-item">Github</li></Link>
                                     <Link to={'/'}><li className="header-item">Talk</li></Link>
                                 </ul>
                             </div>

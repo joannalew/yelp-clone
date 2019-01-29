@@ -14,7 +14,7 @@ class BusinessSearch extends React.Component {
         return (
             <div>
                 <div className="main-header">
-                    <BusinessHeader />
+                    <BusinessHeader history={this.props.history} searchCategories={ this.props.searchCategories } />
 
                     <div className="business-filter-bar">
                         <div className="business-filter-content">

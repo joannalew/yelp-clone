@@ -9,12 +9,12 @@ const HomePageBusinesses = () => {
                     <h2>Yelp San Francisco</h2>
                     <div className="hp-business-location-bar">
                         <ul className="hp-business-locations">
-                            <Link to={'/'}><li className="hp-business-location">New York</li></Link>
-                            <Link to={'/'}><li className="hp-business-location">San Jose</li></Link>
-                            <Link to={'/'}><li className="hp-business-location">Los Angeles</li></Link>
-                            <Link to={'/'}><li className="hp-business-location">Chicago</li></Link>
-                            <Link to={'/'}><li className="hp-business-location">Palo Alto</li></Link>
-                            <Link to={'/'}><li className="hp-business-location">Oakland</li></Link>
+                            <Link to={'/businesses'}><li className="hp-business-location">New York</li></Link>
+                            <Link to={'/businesses'}><li className="hp-business-location">San Jose</li></Link>
+                            <Link to={'/businesses'}><li className="hp-business-location">Los Angeles</li></Link>
+                            <Link to={'/businesses'}><li className="hp-business-location">Chicago</li></Link>
+                            <Link to={'/businesses'}><li className="hp-business-location">Palo Alto</li></Link>
+                            <Link to={'/businesses'}><li className="hp-business-location">Oakland</li></Link>
                         </ul>
                     </div>
                 </div>
@@ -23,13 +23,13 @@ const HomePageBusinesses = () => {
                     <h3>Popular Businesses</h3>
                     <div className="hp-business-list-arrange">
                         <div className="hp-business-card">
-                            <Link to={'/biz/54'}>
+                            <Link to={'/biz/64'}>
                                 <div className="card-photo">
                                     <img src="https://i.imgur.com/KWfOeZG.jpg"></img>
                                 </div>
                             </Link>
                             <div className="card-content">
-                                <Link to={'/biz/54'}>
+                                <Link to={'/biz/64'}>
                                     <div className="card-content-name">Fog Harbor Fish House</div>
                                 </Link>
                                 <div className="card-content-category">Seafood, Bars</div>
@@ -37,13 +37,13 @@ const HomePageBusinesses = () => {
                             </div>
                         </div>
                         <div className="hp-business-card">
-                            <Link to={'/biz/55'}>
+                            <Link to={'/biz/65'}>
                                 <div className="card-photo">
                                     <img src="https://i.imgur.com/OGdpiCo.jpg"></img>
                                 </div>
                             </Link>
                             <div className="card-content">
-                                <Link to={'/biz/55'}>
+                                <Link to={'/biz/65'}>
                                     <div className="card-content-name">Marufuku Ramen</div>
                                 </Link>
                                 <div className="card-content-category">Japanese, Ramen</div>
@@ -51,13 +51,13 @@ const HomePageBusinesses = () => {
                             </div>
                         </div>
                         <div className="hp-business-card">
-                            <Link to={'/biz/56'}>
+                            <Link to={'/biz/66'}>
                                 <div className="card-photo">
                                     <img src="https://i.imgur.com/8RSWlLE.jpg"></img>
                                 </div>
                             </Link>
                             <div className="card-content">
-                                <Link to={'/biz/56'}>
+                                <Link to={'/biz/66'}>
                                     <div className="card-content-name">The House</div>
                                 </Link>
                                 <div className="card-content-category">Asian Fusion</div>
