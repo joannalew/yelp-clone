@@ -5,6 +5,10 @@
     display: flex;
 }
 
+.business-show-review:last-child {
+    border-bottom: none;
+}
+
 .review-item-user-profile {
     flex: 1;
     display: flex;
