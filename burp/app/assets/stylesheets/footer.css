@@ -1,0 +1,52 @@
+.footer-main-content {
+    min-width: 1020px;
+    border-top: 1px solid #ccc;
+    background-color: #f5f5f5;
+}
+
+.footer-content-container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 10px 15px;
+}
+
+
+.footer-social-media-list {
+    margin: 42px auto 0px;
+    text-align: center;
+}
+
+.footer-social-media-list li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-social-media-list li:hover {
+    fill-opacity: 0.5;
+}
+
+.footer-city-image {
+    background-image: url('logos/footer.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 660px 140px;
+    margin: 0px auto 18px;
+    height: 140px;
+}
+
+svg {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.footer-sm-me {
+    fill: #d32323;
+}
+
+.footer-sm-github {
+    fill: #181717;
+}
+
+.footer-sm-linkedin {
+    fill: #0077B5;
+}
