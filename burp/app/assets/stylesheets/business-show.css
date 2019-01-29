@@ -267,3 +267,8 @@
 .button-link:hover {
     text-decoration: underline;
 }
+
+.button-link-header:hover {
+    color: #0073bb;
+    cursor: pointer;
+}

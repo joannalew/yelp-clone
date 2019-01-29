@@ -16,8 +16,8 @@ const Home = () => {
                             <div className="nav-left">
                                 <ul className="nav-content">
                                     <Link to={'/businesses'}><li className="header-item">Write a Review</li></Link>
-                                    <Link to={'/'}><li className="header-item">Github</li></Link>
-                                    <Link to={'/'}><li className="header-item">Talk</li></Link>
+                                    <a href="https://github.com/joannalew/yelp-clone/tree/master/burp"><li className="header-item">Github</li></a>
+                                    <a href="https://www.linkedin.com/in/joannalew/"><li className="header-item">Talk</li></a>
                                 </ul>
                             </div>
                             <div className="nav-right">

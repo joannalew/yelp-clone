@@ -13,8 +13,8 @@ const Greeting = ({ currentUser, demoLogin, path }) => {
 
     const personalGreeting = () => (
         <ul className='welcome-user nav-content'>
-            <Link to='/'><li className="header-icon"><i className="material-icons">chat_bubble</i></li></Link>
-            <Link to='/'><li className="header-icon"><i className="material-icons">notifications</i></li></Link>
+            <a href="https://www.linkedin.com/in/joannalew/"><li className="header-icon"><i className="material-icons">chat_bubble</i></li></a>
+            <a href="https://www.joannalew.com/"><li className="header-icon"><i className="material-icons">notifications</i></li></a>
             <UserProfileContainer />
         </ul>
     );
