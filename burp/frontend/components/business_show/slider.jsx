@@ -72,6 +72,9 @@ class Slider extends React.Component {
                     <div className="showcase-photo-box showcase-photo-3" onMouseEnter={ this.mouseEnter(3) } onMouseLeave={ this.mouseLeave(3) }>
                         <img src={this.props.business.picLinks[this.state.currentIndex + 2]}></img>
                     </div>
+                    <div className="slider-loader">
+                        <img src={this.props.business.picLinks[this.state.currentIndex + 3]}></img>
+                    </div>
                 </div>
 
                 <div className="slider-left-arrow" onClick={ this.prevPhoto }>

@@ -2,11 +2,24 @@
     position: relative;
 }
 
+.showcase-photo-1 {
+    display: absolute;
+    left: 0;
+}
+
+.showcase-photo-2 {
+    display: absolute;
+    left: 220px;
+}
+
+.showcase-photo-3 {
+    display: absolute;
+    left: 440px;
+}
+
 .showcase-photo-box {
-    position: relative;
     height: 220px;
     width: 220px;
-    margin: -15px;
     display: inline-block;
 }
 
@@ -31,7 +44,7 @@
     z-index: 1;
     object-fit: cover;
     transform: translateX(-15px) translateY(-15px);
-    transition: 0.5s;
+    transition: all 0.2s ease-out;
 }
 
 
@@ -63,4 +76,9 @@
     color: #fff;
 }
 
+
+
+.slider-loader {
+    display: none;
+}
 
