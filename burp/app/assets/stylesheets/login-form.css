@@ -30,10 +30,12 @@
 .login-layout {
     display: flex;
     justify-content: center;
+    margin-bottom: 70px;
 }
 
 .login-form { 
     max-width: 300px;
+    height: 360px;
     margin: auto;
     padding: 0px 5px;
     margin-top: 100px;
